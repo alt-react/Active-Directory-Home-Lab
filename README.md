@@ -94,7 +94,7 @@ Set up and configure a Home Lab in VirtualBox focused on 4 virtual machines; a W
 </details>
 
 <details>
-<summary>4) Create the Windows Server 2022 virtual machine in VirtualBox</summary>
+<summary>6) Create the Windows Server 2022 virtual machine in VirtualBox</summary>
 <br>
 
    
