@@ -2,30 +2,71 @@
 
 ## Objective
 
-Set up and configure a Windows Active Directory Home Lab in VirtualBox
+Set up and configure a Home Lab in VirtualBox focused on 4 virtual machines; a Windows 10 PC acting as the target PC, a Kali Linux Machine acting as the attacker machine, a Windows Server 2022 machine acting as an Active Directory Domain Controller, and an Ubuntu Server machine acting the host of a Splunk SIEM instance.
 
 ### Tools Used
 
-- x86-64 Windows PC - for running the required software
+<details>
+<summary>   - x86-64 Windows PC - for running the required software</summary>
+<br>
+
    - minimum specs
       - 4-core processor
       - 16gb ram
       - 250 GB free storage
+</details>
+
 - Draw.io - for creating the network diagram
 - VirtualBox - for creating the virtual network and the virtual machines
 
 ## Steps
 
-1) Create the network diagram in Draw.io
+1) Create the network diagram in [Draw.io](https://www.draw.io)
 
 ![AltReact-Initial_Network_Diagram-50%](https://github.com/alt-react/Active-Directory-Home-Lab/assets/170683744/ce5c58f5-1c5c-4503-8424-2a74cc196a04)
 
-2) Install VirtualBox & Create 4 virtual machines
+<details>
+<summary>2) Download and install VirtualBox</summary>
+<br>
+   
+   - go to https://www.virtualbox.org/wiki/Downloads to download VirtualBox for your system
+   - verify SHA256 checksum to ensure the integrity of the download
+   - install VirtualBox
+</details>
+
+<details>
+<summary>3) Download Windows ISO</summary>
+<br>
+   
+   - go to https://www.microsoft.com/en-ca/software-download/windows10 and click the blue "Download Tool now" button
+   - run the installation file, and choose the "Create installation media (USB flash drive, DVD, or ISO file) for another PC" option, and click next.
+   - choose your desired language, architecture, and edition (or leave it as default), then click next
+   - choose the ISO file option, then click next, then choose your download location
+   - after the download is complete, 
+</details>
 
    - 1 Windows 10 machine (target machine)
    - 1 Kali Linux machine (attacker machine)
    - 1 Ubuntu Server machine (Splunk SIEM)
    - 1 Windows Server 2022 machine (Active Directory)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <!--
 option 1
@@ -113,6 +154,12 @@ Observe the wiped disk:  <br/>
 <img src="https://i.imgur.com/AeZkvFQ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 
+dropdown menu in markup
+<details open>
+<summary>Want to ruin the surprise?</summary>
+<br>
+Well, you asked for it!
+</details>
 
  ```diff
 - text in red
