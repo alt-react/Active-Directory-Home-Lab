@@ -7,6 +7,10 @@ Set up and configure a Windows Active Directory Home Lab in VirtualBox
 ### Tools Used
 
 - x86-64 Windows PC - for runing required software
+   - minimum specs
+      - 4 core processor
+      - 16gb ram
+      - 250gb free storage
 - Draw.io - for creating network diagram
 - VirtualBox - for creating virtual network and virtual machines
 
