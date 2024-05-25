@@ -1,3 +1,30 @@
+# Active Directory Home Lab
+
+## Objective
+
+Set up and configure a Windows Active Directory Home Lab in VirtualBox
+
+### Tools Used
+
+- x86-64 Windows PC - for runing required software
+- Draw.io - for creating network diagram
+- VirtualBox - for creating virtual network and virtual machines
+
+## Steps
+
+1) Create network diagram in Draw.io
+
+![AltReact-Initial_Network_Diagram-50%](https://github.com/alt-react/Active-Directory-Home-Lab/assets/170683744/27b453c7-3f8c-4bf5-9051-f9d19c079d37)
+
+
+2) Install VirtualBox & Create virtual machines
+
+   - Windows 10
+   - Kali Linux
+   - Ubuntu Server
+   - Windows Server 2022
+
+<!--
 option 1
 
 # PROJECTNAME
@@ -83,7 +110,7 @@ Observe the wiped disk:  <br/>
 <img src="https://i.imgur.com/AeZkvFQ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 
-<!--
+
  ```diff
 - text in red
 + text in green
@@ -92,5 +119,3 @@ Observe the wiped disk:  <br/>
 @@ text in purple (and bold)@@
 ```
 --!>
-
--->
