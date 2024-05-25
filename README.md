@@ -18,9 +18,7 @@ Set up and configure a Windows Active Directory Home Lab in VirtualBox
 
 1) Create network diagram in Draw.io
 
-
-![Network Diagram](https://i.imgur.com/fiT1685)
-
+![AltReact-Initial_Network_Diagram-50%](https://github.com/alt-react/Active-Directory-Home-Lab/assets/170683744/ce5c58f5-1c5c-4503-8424-2a74cc196a04)
 
 2) Install VirtualBox & Create virtual machines
 
