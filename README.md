@@ -20,12 +20,12 @@ Set up and configure a Windows Active Directory Home Lab in VirtualBox
 
 ![AltReact-Initial_Network_Diagram-50%](https://github.com/alt-react/Active-Directory-Home-Lab/assets/170683744/ce5c58f5-1c5c-4503-8424-2a74cc196a04)
 
-2) Install VirtualBox & Create virtual machines
+2) Install VirtualBox & Create 4 virtual machines
 
-   - Windows 10
-   - Kali Linux
-   - Ubuntu Server
-   - Windows Server 2022
+   - 1 Windows 10 machine
+   - 1 Kali Linux machine
+   - 1 Ubuntu Server machine
+   - 1 Windows Server 2022 machine
 
 <!--
 option 1
