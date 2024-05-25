@@ -42,8 +42,31 @@ Set up and configure a Home Lab in VirtualBox focused on 4 virtual machines; a W
    - run the installation file, and choose the "Create installation media (USB flash drive, DVD, or ISO file) for another PC" option, and click next.
    - choose your desired language, architecture, and edition (or leave it as default), then click next
    - choose the ISO file option, then click next, then choose your download location
-   - after the download is complete, 
 </details>
+
+<details>
+<summary>4) Create Windows 10 virtual machine>
+<br>
+   
+Download the Windows 10 ISO file
+
+   - go to https://www.microsoft.com/en-ca/software-download/windows10 and click the blue "Download Tool now" button
+   - run the installation file, then choose the "Create installation media (USB flash drive, DVD, or ISO file) for another PC" option, and click next.
+   - choose your desired language, architecture, and edition (or leave it as default), then click next
+   - choose the ISO file option, then click next, then choose your download location
+
+Create the Windows 10 virtual machine in VirtualBox
+
+
+   - click the "New" button (blue spikey orb icon) in VirtualBox
+   - enter the desired name of this virtual machine in the "Name" field
+   - choose the desired location for your virtual machine in the "Folder" section
+   - select the Windows 10 IOS file you downloaded in the "ISO Image" section
+   - for a manual Windows install select the "Skip Unattended Installation" option, or leave deselected, then click "Next"
+   - 
+
+</details>
+
 
    - 1 Windows 10 machine (target machine)
    - 1 Kali Linux machine (attacker machine)
