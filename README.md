@@ -6,23 +6,19 @@ Set up and configure a Windows Active Directory Home Lab in VirtualBox
 
 ### Tools Used
 
-- x86-64 Windows PC - for runing required software
+- x86-64 Windows PC - for running the required software
    - minimum specs
-      - 4 core processor
+      - 4-core processor
       - 16gb ram
-      - 250gb free storage
-- Draw.io - for creating network diagram
-- VirtualBox - for creating virtual network and virtual machines
+      - 250 GB free storage
+- Draw.io - for creating the network diagram
+- VirtualBox - for creating the virtual network and the virtual machines
 
 ## Steps
 
-1) Create network diagram in Draw.io
+1) Create the network diagram in Draw.io
 
 ![AltReact-Initial_Network_Diagram-50%](https://github.com/alt-react/Active-Directory-Home-Lab/assets/170683744/ce5c58f5-1c5c-4503-8424-2a74cc196a04)
-
-![](!https://github.com/alt-react/Active-Directory-Home-Lab/assets/170683744/ce5c58f5-1c5c-4503-8424-2a74cc196a04)
-
-![AltReact-Initial_Network_Diagram-50%](https://imgur.com/a/altreact-initial-network-diagram-50-I328dQM)
 
 2) Install VirtualBox & Create virtual machines
 
