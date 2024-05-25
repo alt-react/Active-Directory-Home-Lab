@@ -84,29 +84,17 @@ Set up and configure a Home Lab in VirtualBox focused on 4 virtual machines; a W
    <summary>Download the Kali Linux ISO file</summary>
    <br>
 
-   * go to [Kali.org](https://www.kali.org) and click "Download"
-   * 
-   </details>
-
-   <details>
-   <summary>Configure the virtual machine environment to use for Kali Linux installation</summary>
-   <br>
-   
-   * click the "New" button (blue spikey orb icon) in VirtualBox
-   * enter the desired name of this virtual machine in the "Name" field
-   * choose the desired location for your virtual machine in the "Folder" section
-   * select the Kali Linux IOS file you downloaded in the "ISO Image" section
-   * for a manual Windows install select the "Skip Unattended Installation" option, or leave deselected, then click "Next"
-   * choose the desired RAM amount and number of CPUs to use for this virtual machine, then click "Next"
-   * choose the desired storage configuration, then click "Next"
-   * if you are happy with the configuration summary, click "Finish"
+   * go to [Kali.org/get-kali](https://www.kali.org/get-kali) and click "Virtual Machines"
+   * select your architecture, then click "VIrtualBox"
+   * once your virtual machine image downloads, make sure 7-zip is installed, then double-click the extracted Kali Linux VirtualBox image
    </details>
    
    <details>
-   <summary>Install Kali Linux in the newly created virtual machine environment</summary>
+   <summary>Run Kali Linux virtual machine</summary>
    <br>
    
    * click "Start" (green arrow icon) in VirtualBox to start the virtual machine
+   * login using "kali" as the username and "kali" as the password
    </details>
 
 </details>
