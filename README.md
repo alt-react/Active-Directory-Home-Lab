@@ -22,10 +22,10 @@ Set up and configure a Windows Active Directory Home Lab in VirtualBox
 
 2) Install VirtualBox & Create 4 virtual machines
 
-   - 1 Windows 10 machine
-   - 1 Kali Linux machine
-   - 1 Ubuntu Server machine
-   - 1 Windows Server 2022 machine
+   - 1 Windows 10 machine (target machine)
+   - 1 Kali Linux machine (attacker machine)
+   - 1 Ubuntu Server machine (Splunk SIEM)
+   - 1 Windows Server 2022 machine (Active Directory)
 
 <!--
 option 1
