@@ -35,43 +35,36 @@ Set up and configure a Home Lab in VirtualBox focused on 4 virtual machines; a W
 </details>
 
 <details>
-<summary>3) Download Windows ISO</summary>
+<summary>3) Create the Windows 10 virtual machine in VirtualBox</summary>
 <br>
+
+   Download the Windows ISO file
    
    - go to https://www.microsoft.com/en-ca/software-download/windows10 and click the blue "Download Tool now" button
-   - run the installation file, and choose the "Create installation media (USB flash drive, DVD, or ISO file) for another PC" option, and click next.
-   - choose your desired language, architecture, and edition (or leave it as default), then click next
-   - choose the ISO file option, then click next, then choose your download location
-</details>
-
-<details>
-<summary>4) Create Windows 10 virtual machine>
-<br>
-   
-Download the Windows 10 ISO file
-
-   - go to https://www.microsoft.com/en-ca/software-download/windows10 and click the blue "Download Tool now" button
-   - run the installation file, then choose the "Create installation media (USB flash drive, DVD, or ISO file) for another PC" option, and click next.
+   - run the installation file, choose the "Create installation media (USB flash drive, DVD, or ISO file) for another PC" option, and click next.
    - choose your desired language, architecture, and edition (or leave it as default), then click next
    - choose the ISO file option, then click next, then choose your download location
 
-Create the Windows 10 virtual machine in VirtualBox
-
+   Configure the virtual machine environment to use for Windows 10 installation
 
    - click the "New" button (blue spikey orb icon) in VirtualBox
    - enter the desired name of this virtual machine in the "Name" field
    - choose the desired location for your virtual machine in the "Folder" section
    - select the Windows 10 IOS file you downloaded in the "ISO Image" section
    - for a manual Windows install select the "Skip Unattended Installation" option, or leave deselected, then click "Next"
-   - 
+   - choose the desired RAM amount and number of CPUs to use for this virtual machine, then click "Next"
+   - choose the desired storage configuration, then click "Next"
+   - if you are happy with the configuration summary, click "Finish"
 
 </details>
 
+<details>
+<summary></summary>
+<br>
 
-   - 1 Windows 10 machine (target machine)
-   - 1 Kali Linux machine (attacker machine)
-   - 1 Ubuntu Server machine (Splunk SIEM)
-   - 1 Windows Server 2022 machine (Active Directory)
+   
+
+</details>
 
 
 
