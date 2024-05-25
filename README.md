@@ -10,10 +10,10 @@ Set up and configure a Home Lab in VirtualBox focused on 4 virtual machines; a W
 <summary>   - x86-64 Windows PC - for running the required software</summary>
 <br>
 
-   - minimum specs
-      - 4-core processor
-      - 16gb ram
-      - 250 GB free storage
+   * minimum specs
+      * 4-core processor
+      * 16gb ram
+      * 250 GB free storage
 </details>
 
 - Draw.io - for creating the network diagram
@@ -30,32 +30,52 @@ Set up and configure a Home Lab in VirtualBox focused on 4 virtual machines; a W
 <summary>2) Download and install VirtualBox</summary>
 <br>
    
-   - go to https://www.virtualbox.org/wiki/Downloads to download VirtualBox for your system
-   - verify SHA256 checksum to ensure the integrity of the download
-   - install VirtualBox
+   * go to https://www.virtualbox.org/wiki/Downloads to download VirtualBox for your system
+   * verify SHA256 checksum to ensure the integrity of the download
+   * install VirtualBox
 </details>
 
 <details>
 <summary>3) Create the Windows 10 virtual machine in VirtualBox</summary>
 <br>
 
-   Download the Windows ISO file
+   <details>
+   <summary>Download the Windows ISO file</summary>
+   <br>
+
+   * go to https://www.microsoft.com/en-ca/software-download/windows10 and click the blue "Download Tool now" button
+   * run the installation file, choose the "Create installation media (USB flash drive, DVD, or ISO file) for another PC" option, and click next.
+   * choose your desired language, architecture, and edition (or leave it as default), then click next
+   * choose the ISO file option, then click next, then choose your download location
+   </details>
+
+   <details>
+   <summary>Configure the virtual machine environment to use for Windows 10 installation</summary>
+   <br>
    
-   - go to https://www.microsoft.com/en-ca/software-download/windows10 and click the blue "Download Tool now" button
-   - run the installation file, choose the "Create installation media (USB flash drive, DVD, or ISO file) for another PC" option, and click next.
-   - choose your desired language, architecture, and edition (or leave it as default), then click next
-   - choose the ISO file option, then click next, then choose your download location
+   * click the "New" button (blue spikey orb icon) in VirtualBox
+   * enter the desired name of this virtual machine in the "Name" field
+   * choose the desired location for your virtual machine in the "Folder" section
+   * select the Windows 10 IOS file you downloaded in the "ISO Image" section
+   * for a manual Windows install select the "Skip Unattended Installation" option, or leave deselected, then click "Next"
+   * choose the desired RAM amount and number of CPUs to use for this virtual machine, then click "Next"
+   * choose the desired storage configuration, then click "Next"
+   * if you are happy with the configuration summary, click "Finish"
+   </details>
+   
+   <details>
+   <summary>Install Windows 10 in the newly created virtual machine environment</summary>
+   <br>
+   
+   * click "Start" (green arrow icon) in VirtualBox to start the virtual machine
+   </details>
+   
 
-   Configure the virtual machine environment to use for Windows 10 installation
+   
 
-   - click the "New" button (blue spikey orb icon) in VirtualBox
-   - enter the desired name of this virtual machine in the "Name" field
-   - choose the desired location for your virtual machine in the "Folder" section
-   - select the Windows 10 IOS file you downloaded in the "ISO Image" section
-   - for a manual Windows install select the "Skip Unattended Installation" option, or leave deselected, then click "Next"
-   - choose the desired RAM amount and number of CPUs to use for this virtual machine, then click "Next"
-   - choose the desired storage configuration, then click "Next"
-   - if you are happy with the configuration summary, click "Finish"
+   
+
+   
 
 </details>
 
