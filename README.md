@@ -1,4 +1,4 @@
-# Active Directory Home Lab
+# Active Directory Home Lab 
 
 ## Objective
 
@@ -21,7 +21,7 @@ Set up and configure a Windows Active Directory Home Lab in VirtualBox
 
 ![image](https://i.imgur.com/fiT1685)
 
-<img src="https://i.imgur.com/fiT1685"/>
+<img src="https://i.imgur.com/fiT1685" />
 
 
 2) Install VirtualBox & Create virtual machines
