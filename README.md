@@ -18,6 +18,7 @@ Set up and configure a Home Lab in VirtualBox focused on 4 virtual machines; a W
 
 - Draw.io - for creating the network diagram
 - VirtualBox - for creating the virtual network and the virtual machines
+- Windows Media Creation Tool
 
 ## Steps
 
