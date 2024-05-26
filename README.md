@@ -1,8 +1,28 @@
 # Active Directory Home Lab 
 
-## Objective
+## Objectives
 
-Set up and configure a Home Lab in VirtualBox focused on 4 virtual machines; a Windows 10 PC acting as the target machine, a Kali Linux Machine acting as the attacker machine, a Windows Server 2022 machine acting as an Active Directory Domain Controller, and an Ubuntu Server machine acting the host of a Splunk SIEM instance.
+1) Set up a Home Lab in VirtualBox consisting of 4 VirtualBox virtual machines:
+
+  - a Windows 10 machine
+  - a Kali Linux Machine
+  - a Windows Server 2022 machine
+  - an Ubuntu Server machine.
+
+2) Install and configure:
+
+  - Sysmon 
+  - Splunk
+
+  on our:
+
+  - Windows 10 machine
+  - Windows Server 2022 machine
+
+  so they can:
+
+  - collect telemetry
+  - send log to a Splunk server
 
 ### Tools Used
 
@@ -19,6 +39,8 @@ Set up and configure a Home Lab in VirtualBox focused on 4 virtual machines; a W
 - Draw.io - for creating the network diagram
 - VirtualBox - for creating the virtual network and the virtual machines
 - Windows Media Creation Tool
+- Sysmon
+- Splunk SIEM
 
 ## Steps
 <details>
