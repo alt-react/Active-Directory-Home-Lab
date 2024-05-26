@@ -2,7 +2,12 @@
 
 ## Objectives
 
-To document the entire process of setting up a home lab to be used to gain experience while doing hands-on cyber security portfolio projects.
+> [!NOTE]
+> To document the entire process of setting up a home lab to be used to gain experience while doing hands-on cyber security portfolio projects.
+> 
+> This repository will be updated in real-time as I progress through this project, so star it if you want to follow along.
+
+___
 
 1) Set up a Home Lab in VirtualBox consisting of 4 VirtualBox virtual machines:
 
