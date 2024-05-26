@@ -191,21 +191,31 @@ ___
 
 ___
 
-### Configure virtual network
+### Set up a virtual network in VirtualBox
 
 <details>
-<summary>Set VirtualBox settings to NAT network</summary>
+<summary>Create a NAT network in VirtualBox</summary>
 <br>
-   
-   Why? So that  virtual machines can be on the same network and still have internet access
 
    1) open VirtualBox, click on "Tools", then click on "Network"
    2) click the "NAT Networks" tab, then click the "Create" button
    3) click on the newly created "NatNetwork" then change "Name" to whatever you like (optional)
-   4) change 
+   4) change the "IPv4 Prefix" to the prefix you defined in the network diagram you created
+   5) leave "Enable DHCP" checked, and hit "Apply"
 
 </details>
 
+<details>
+<summary>Add all 4 virtual machines to the NAT network you created in VirtualBox</summary>
+<br>
+
+For each of the 4 virtual machines, complete the following steps:
+
+   1) click on the virtual machine, click "Settings", then click "Network"
+   2) in the "Adapter 1" tab, click inside the "Attached to:" dropdown menu and choose "NAT Network"
+   3) in the "Name" dropdown menu, make sure to select the NAT network that you created in step 3 in the previous set of steps, then click "OK"
+
+</details>
 
 
 
