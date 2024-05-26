@@ -176,9 +176,14 @@
 
 </details>
 
+<details open>
+<summary>Set VirtualBox settings to NAT network</summary>
+<br>
+   
+   Why? So that  virtual machines can be on the same network, and still have internet access
+   
 
-
-
+</details>
 
 
 
