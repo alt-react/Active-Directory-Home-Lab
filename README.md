@@ -2,6 +2,8 @@
 
 ## Objectives
 
+To document the entire process of setting up a home lab to be used to gain experience while doing hands-on cyber security portfolio projects.
+
 1) Set up a Home Lab in VirtualBox consisting of 4 VirtualBox virtual machines:
 
      * 1 Windows 10 machine          
@@ -29,7 +31,7 @@
 
    * minimum specs
       * 4-core processor
-      * 16gb ram
+      * 16 GB RAM
       * 250 GB free storage
 </details>
 
