@@ -182,7 +182,7 @@ ___
    * select "Try or Install Ubuntu Server" and hit the enter key
    * hit enter 6 times for default settings
    * at the "Mirror check still running" section, choose "continue", and hit enter
-   * at the "Guided storage configuration menu, use the down arrow to navigate to the "Done" option, then hit "Enter"
+   * at the "Guided storage configuration" menu, use the down arrow to navigate to the "Done" option, then hit "Enter"
    * at the "Storage configuration menu", use the down arrow to navigate to "Done", hit "enter", then go to "Continue" and hit enter
    * at the "Profile setup screen", enter whatever name, server name, username, and password you like, then navigate to "Done" and hit "enter"
    * hit "enter" to skip "Ubuntu Pro"
@@ -251,7 +251,32 @@ ___
 
 </details>
 
+___
 
+<details>
+<summary>Download and install Splunk on Ubuntu Server (Splunk SIEM)</summary>
+<br>
+
+   1) on your host machine (not on any of your virtual machines, but on the machine running your virtual machines), go to [splunk.com](https://www.splunk.com), sign up with an account, and log in
+   2) got to the "Products" tab, then click on "Free Trials & Downloads"
+   3) scroll down to "Splunk Enterprise" and click on "Get My Free Trial"
+   4) under "Choose Your Installation Package", click the "Linux" option, then click the "Download Now" button for the ".deb" option
+   5) scroll through the Splunk General Terms document, click the "I have read, understood, etc" box, then click the Access program" button to start the Splunk download
+   6) on your Ubuntu Server virtual machine, type `sudo apt install virtualbox-guest-additions-iso` and hit "Enter"
+   7) type in `y`, then hit "Enter" to start the virtualbox-guest-additions-iso installation
+   8) in the virtual machine window, click the "Devices" tab, hover over "Shared Folders", and select "Shared Folder Settings"
+   9) click on the blue folder icon towards the top-right of the window to add a folder
+   10) in the "Folder Path:" section, choose "Other", and add the path to the "splunk*.deb" file we downloaded earlier
+   11) leave the "Folder Name:" section as is, then select the "Read-only", "Auto-mount", "Make-Permanent" options, click "OK", then click "OK" again
+   12) in our Ubuntu Server command line interface, type `sudo reboot` and hit "Enter"
+   13) log back into the Ubuntu Server, type in `sudo apt install virtualbox-guest-utils`, then hit "Enter"
+   14) type `sudo adduser *your username* vboxsf` and hit "Enter", type `sudo reboot` and hit "Enter"
+   15) log back into the Ubuntu Server, then type `sudo adduser *your username* vboxsf`, and hit "Enter"
+   16) type 'mkdir share', hit "Enter", then type `ls`, and hit "Enter"
+    
+    
+    
+</details>
 
 
 
