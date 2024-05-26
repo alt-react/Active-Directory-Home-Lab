@@ -262,6 +262,9 @@ ___
    3) scroll down to "Splunk Enterprise" and click on "Get My Free Trial"
    4) under "Choose Your Installation Package", click the "Linux" option, then click the "Download Now" button for the ".deb" option
    5) scroll through the Splunk General Terms document, click the "I have read, understood, etc" box, then click the Access program" button to start the Splunk download
+   
+   Set up folder sharing between VirtualBox host and Ubuntu Server virtual machine
+   
    6) on your Ubuntu Server virtual machine, type `sudo apt install virtualbox-guest-additions-iso` and hit "Enter"
    7) type in `y`, then hit "Enter" to start the virtualbox-guest-additions-iso installation
    8) in the virtual machine window, click the "Devices" tab, hover over "Shared Folders", and select "Shared Folder Settings"
