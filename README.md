@@ -90,7 +90,7 @@ Set up and configure a Home Lab in VirtualBox focused on 4 virtual machines; a W
    </details>
    
    <details>
-   <summary>Run Kali Linux virtual machine</summary>
+   <summary>Run Kali Linux in VirtualBox</summary>
    <br>
    
    * click "Start" (green arrow icon) in VirtualBox to start the virtual machine
@@ -105,7 +105,7 @@ Set up and configure a Home Lab in VirtualBox focused on 4 virtual machines; a W
 
    <details>
    <summary>Download the Ubuntu Server ISO file</summary>
-   <be>
+   <br>
 
    * 
    </details>
@@ -141,6 +141,9 @@ Set up and configure a Home Lab in VirtualBox focused on 4 virtual machines; a W
    <summary>Download the Windows Server 2022 ISO file</summary>
    <br>
 
+   * search for "windows server 2022 iso" and click the "Windows Server 2022 | Microsoft Evaluation Center" link
+   * click "Download the ISO" link, then fill out the information, and click the blue "Download Now" button
+   * click the "64-bit edition" link to download the ISO
    * 
    </details>
 
