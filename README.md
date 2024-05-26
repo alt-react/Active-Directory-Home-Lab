@@ -195,7 +195,7 @@ ___
 
 ___
 
-### Set up and configure a network in VirtualBox
+### Set up and configure the Home Lab network in VirtualBox
 
 <details>
 <summary>Create a NAT network in VirtualBox</summary>
@@ -210,7 +210,7 @@ ___
 </details>
 
 <details>
-<summary>Add our virtual machines to the same network in VirtualBox</summary>
+<summary>Add our virtual machines to the NAT network we  created in VirtualBox</summary>
 <br>
 
 For each of the 4 virtual machines, complete the following steps:
@@ -220,6 +220,8 @@ For each of the 4 virtual machines, complete the following steps:
    3) in the "Name" dropdown menu, make sure to select the NAT network that you created in step 3 in "Set up a virtual network in VirtualBox", then click "OK"
 
 </details>
+
+___
 
 <details>
 <summary>Configure static IP address on Ubuntu Server (Splunk SIEM) virtual machine</summary>
