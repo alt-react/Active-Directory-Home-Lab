@@ -213,11 +213,34 @@ For each of the 4 virtual machines, complete the following steps:
 
    1) click on the virtual machine, click "Settings", then click "Network"
    2) in the "Adapter 1" tab, click inside the "Attached to:" dropdown menu and choose "NAT Network"
-   3) in the "Name" dropdown menu, make sure to select the NAT network that you created in step 3 in the previous set of steps, then click "OK"
+   3) in the "Name" dropdown menu, make sure to select the NAT network that you created in step 3 in "Set up a virtual network in VirtualBox", then click "OK"
 
 </details>
 
+<details>
+<summary>Configure static IP address on Ubuntu Server (Splunk SIEM) virtual machine</summary>
+<br>
 
+   1) start the Ubuntu Server (Splunk SIEM) virtual machine
+   2) log in, type `ip a`, then hit "Enter" to see the virtual machine's current IP address
+   3) type in `sudo nano /etc/netplan/00-installer-config.yaml`, then hit the "enter" key
+   4) enter:
+
+            network:
+                ethernet:
+                    enpos3:
+                        dhcp4: no
+                        addresses: [192.168.10.10/24]
+                        nameservers:
+                            addresses: [8.8.8.8]
+                        routes:
+                            - to: default
+                              via: 192.168.10.1
+                version: 2
+   5) hit the "ctrl + x" keys, press y, then hit "Enter" to save the file
+   6) 
+
+</details>
 
 
 
