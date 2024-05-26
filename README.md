@@ -210,7 +210,7 @@ ___
 </details>
 
 <details>
-<summary>Add our virtual machines to the NAT network we  created in VirtualBox</summary>
+<summary>Add our virtual machines to the NAT network</summary>
 <br>
 
 For each of the 4 virtual machines, complete the following steps:
@@ -254,6 +254,40 @@ ___
 ___
 
 <details>
+<summary>Add our virtual machines to the NAT network we  created in VirtualBox</summary>
+<br>
+
+For each of the 4 virtual machines, complete the following steps:
+
+   1) click on the virtual machine, click "Settings", then click "Network"
+   2) in the "Adapter 1" tab, click inside the "Attached to:" dropdown menu and choose "NAT Network"
+   3) in the "Name" dropdown menu, make sure to select the NAT network that you created in step 3 in "Set up a virtual network in VirtualBox", then click "OK"
+
+</details>
+
+___
+
+<details>
+<summary>Set up folder sharing between VirtualBox host and Ubuntu Server virtual machine</summary>
+<br>
+
+   1) on your host computer, create a project folder for your project named "Active Directory Home Lab"
+   2) in your Ubuntu Server virtual machine, type `sudo apt install virtualbox-guest-additions-iso` and hit "Enter"
+   3) type in `y`, then hit "Enter" to start the virtualbox-guest-additions-iso installation
+   4) in the virtual machine window, click the "Devices" tab, hover over "Shared Folders", and select "Shared Folder Settings"
+   5) click on the blue folder icon towards the top-right of the window to add a folder
+   6) in the "Folder Path:" section, choose "Other", and add the path to the "splunk*.deb" file we downloaded earlier
+   7) leave the "Folder Name:" section as is, then select the "Read-only", "Auto-mount", "Make-Permanent" options, click "OK", then click "OK" again
+   8) in our Ubuntu Server command line interface, type `sudo reboot` and hit "Enter"
+   9) log back into the Ubuntu Server, type in `sudo apt install virtualbox-guest-utils`, then hit "Enter"
+   10) type `sudo adduser *your username* vboxsf` and hit "Enter", type `sudo reboot` and hit "Enter"
+   11) log back into the Ubuntu Server, then type `sudo adduser *your username* vboxsf`, and hit "Enter"
+   12) type 'mkdir share', hit "Enter", then type `ls`, and hit "Enter"
+   13) type in `sudo mount -t vboxsf -o uid=1000,gid=1000 name-of-shared-folder`, then hit "Enter"
+
+</details>
+
+<details>
 <summary>Download and install Splunk on Ubuntu Server (Splunk SIEM)</summary>
 <br>
 
@@ -262,20 +296,9 @@ ___
    3) scroll down to "Splunk Enterprise" and click on "Get My Free Trial"
    4) under "Choose Your Installation Package", click the "Linux" option, then click the "Download Now" button for the ".deb" option
    5) scroll through the Splunk General Terms document, click the "I have read, understood, etc" box, then click the Access program" button to start the Splunk download
+   6) move the "spunk*.dev file into the "Active Directory Home Lab" folder we created in step 1 of the previous section
    
-   Set up folder sharing between VirtualBox host and Ubuntu Server virtual machine
    
-   6) on your Ubuntu Server virtual machine, type `sudo apt install virtualbox-guest-additions-iso` and hit "Enter"
-   7) type in `y`, then hit "Enter" to start the virtualbox-guest-additions-iso installation
-   8) in the virtual machine window, click the "Devices" tab, hover over "Shared Folders", and select "Shared Folder Settings"
-   9) click on the blue folder icon towards the top-right of the window to add a folder
-   10) in the "Folder Path:" section, choose "Other", and add the path to the "splunk*.deb" file we downloaded earlier
-   11) leave the "Folder Name:" section as is, then select the "Read-only", "Auto-mount", "Make-Permanent" options, click "OK", then click "OK" again
-   12) in our Ubuntu Server command line interface, type `sudo reboot` and hit "Enter"
-   13) log back into the Ubuntu Server, type in `sudo apt install virtualbox-guest-utils`, then hit "Enter"
-   14) type `sudo adduser *your username* vboxsf` and hit "Enter", type `sudo reboot` and hit "Enter"
-   15) log back into the Ubuntu Server, then type `sudo adduser *your username* vboxsf`, and hit "Enter"
-   16) type 'mkdir share', hit "Enter", then type `ls`, and hit "Enter"
     
     
     
