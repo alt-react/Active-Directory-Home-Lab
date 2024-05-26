@@ -39,7 +39,7 @@
 
 ## Steps
 <details>
-<summary>1) Create the network diagram</summary>
+<summary>Create the network diagram</summary>
 <br>
 
   ![AltReact-Initial_Network_Diagram-50%](https://github.com/alt-react/Active-Directory-Home-Lab/assets/170683744/ce5c58f5-1c5c-4503-8424-2a74cc196a04)
@@ -48,8 +48,12 @@
 
 </details>
 
+___
+
+### Create Virtual Machines
+
 <details>
-<summary>2) Download and install VirtualBox</summary>
+<summary>Download and install VirtualBox</summary>
 <br>
    
    * go to https://www.virtualbox.org/wiki/Downloads to download VirtualBox for your system
@@ -58,7 +62,7 @@
 </details>
 
 <details>
-<summary>3) Create the Windows 10 virtual machine in VirtualBox</summary>
+<summary>Create the Windows 10 virtual machine in VirtualBox</summary>
 <br>
 
   Download the Windows 10 ISO file
@@ -90,7 +94,7 @@
 </details>
 
 <details>
-<summary>4) Create the Kali Linux virtual machine in VirtualBox</summary>
+<summary>Create the Kali Linux virtual machine in VirtualBox</summary>
 <br>
 
   Download the Kali Linux ISO file
@@ -107,7 +111,7 @@
 </details>
 
 <details>
-<summary>5) Create the Windows Server 2022 virtual machine in VirtualBox</summary>
+<summary>Create the Windows Server 2022 virtual machine in VirtualBox</summary>
 <br>
 
   Download the Windows Server 2022 ISO file
@@ -139,7 +143,7 @@
 </details>
 
 <details>
-<summary>6) Create the Ubuntu Server virtual machine in VirtualBox</summary>
+<summary>Create the Ubuntu Server virtual machine in VirtualBox</summary>
 <br>
 
    Download the Ubuntu Server ISO file
@@ -176,7 +180,11 @@
 
 </details>
 
-<details open>
+___
+
+### Configure virtual network
+
+<details>
 <summary>Set VirtualBox settings to NAT network</summary>
 <br>
    
