@@ -17,8 +17,12 @@ ___
      * 1 Ubuntu Server machine       
     
     ![homeLabVMs](https://github.com/alt-react/Active-Directory-Home-Lab/assets/170683744/6be2c0df-a5c2-4eff-a646-3d03f733b11c)
+
+2) Create a network in VirtualBox, and add our virtual machines to that same network
+
+3) Configure static IP addresses on each virtual machine
                                             
-3) Install and configure Sysmon and Splunk on our:
+4) Install and configure Sysmon and Splunk on our:
 
    * Windows 10 machine and
    * Windows Server 2022 machine
@@ -191,7 +195,7 @@ ___
 
 ___
 
-### Set up a virtual network in VirtualBox
+### Set up and configure a network in VirtualBox
 
 <details>
 <summary>Create a NAT network in VirtualBox</summary>
@@ -206,7 +210,7 @@ ___
 </details>
 
 <details>
-<summary>Add all 4 virtual machines to the NAT network you created in VirtualBox</summary>
+<summary>Add our virtual machines to the same network in VirtualBox</summary>
 <br>
 
 For each of the 4 virtual machines, complete the following steps:
@@ -238,7 +242,10 @@ For each of the 4 virtual machines, complete the following steps:
                               via: 192.168.10.1
                 version: 2
    5) hit the "ctrl + x" keys, press y, then hit "Enter" to save the file
-   6) 
+   6) type `sudo netplan apply` and hit "Enter"
+   7) type `ip a` again, to verify that our IP address is 192.168.10.10
+   8) type in `ping google.com` and hit "Enter" to verify the internet connection through our server
+   9) hit the "ctrl + c" keys to stop the ping command
 
 </details>
 
