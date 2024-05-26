@@ -21,10 +21,15 @@ Set up and configure a Home Lab in VirtualBox focused on 4 virtual machines; a W
 - Windows Media Creation Tool
 
 ## Steps
+<details>
+<summary>1) Create the network diagram</summary>
+<br>
 
-1) Create the network diagram in [Draw.io](https://www.draw.io)
+  ![AltReact-Initial_Network_Diagram-50%](https://github.com/alt-react/Active-Directory-Home-Lab/assets/170683744/ce5c58f5-1c5c-4503-8424-2a74cc196a04)
 
-![AltReact-Initial_Network_Diagram-50%](https://github.com/alt-react/Active-Directory-Home-Lab/assets/170683744/ce5c58f5-1c5c-4503-8424-2a74cc196a04)
+  * you can do this in [Draw.io](https://www.draw.io)
+
+</details>
 
 <details>
 <summary>2) Download and install VirtualBox</summary>
@@ -85,34 +90,7 @@ Set up and configure a Home Lab in VirtualBox focused on 4 virtual machines; a W
 </details>
 
 <details>
-<summary>5) Create the Ubuntu Server virtual machine in VirtualBox</summary>
-<br>
-
-   Download the Ubuntu Server ISO file
-
-   * go to [ubuntu.com](https://www.ubuntu.com), go to the products tab, and click "Ubuntu Server"
-   * click the green "Download Ubuntu Server" button
-   * click the green "Download 24.04 LTS" button to start the download (version 24.04 LTS was the latest version when writing this)
-
-  Configure the virtual machine environment to use for Ubuntu Server installation
-   
-   * click the "New" button (blue spikey orb icon) in VirtualBox
-   * enter the desired name of this virtual machine in the "Name" field
-   * choose the desired location for your virtual machine in the "Folder" section
-   * select the Ubuntu Server IOS file you downloaded in the "ISO Image" section
-   * for a manual Windows install select the "Skip Unattended Installation" option, or leave deselected, then click "Next"
-   * choose the desired RAM amount and number of CPUs to use for this virtual machine, then click "Next"
-   * choose the desired storage configuration, then click "Next"
-   * if you are happy with the configuration summary, click "Finish"
-   
-  Install Ubuntu Server in the newly created virtual machine environment
-   
-   * click "Start" (green arrow icon) in VirtualBox to start the virtual machine
-
-</details>
-
-<details>
-<summary>6) Create the Windows Server 2022 virtual machine in VirtualBox</summary>
+<summary>5) Create the Windows Server 2022 virtual machine in VirtualBox</summary>
 <br>
 
   Download the Windows Server 2022 ISO file
@@ -140,6 +118,43 @@ Set up and configure a Home Lab in VirtualBox focused on 4 virtual machines; a W
    * accept the "terms and agreements", then click "Next"
    * select "Custom: Install Microsoft Server Operating System only (advanced)", then click "Next"
    * after installation, enter secure password, then click "Finish"
+
+</details>
+
+<details>
+<summary>6) Create the Ubuntu Server virtual machine in VirtualBox</summary>
+<br>
+
+   Download the Ubuntu Server ISO file
+
+   * go to [ubuntu.com](https://www.ubuntu.com), go to the products tab, and click "Ubuntu Server"
+   * click the green "Download Ubuntu Server" button
+   * click the green "Download 24.04 LTS" button to start the download (version 24.04 LTS was the latest version when writing this)
+
+  Configure the virtual machine environment to use for Ubuntu Server installation
+   
+   * click the "New" button (blue spikey orb icon) in VirtualBox
+   * enter the desired name of this virtual machine in the "Name" field
+   * choose the desired location for your virtual machine in the "Folder" section
+   * select the Ubuntu Server IOS file you downloaded in the "ISO Image" section
+   * for a manual Windows install select the "Skip Unattended Installation" option, or leave deselected, then click "Next"
+   * choose the desired RAM amount and number of CPUs to use for this virtual machine, then click "Next"
+   * choose the desired storage configuration, then click "Next"
+   * if you are happy with the configuration summary, click "Finish"
+   
+  Install Ubuntu Server in the newly created virtual machine environment
+   
+   * click "Start" (green arrow icon) in VirtualBox to start the virtual machine
+   * select "Try or Install Ubuntu Server" and hit the enter key
+   * hit enter 6 times for default settings
+   * at the "Mirror check still running" section, choose "continue", and hit enter
+   * at the "Guided storage configuration menu, use the down arrow to navigate to "Done" option, then hit "enter"
+   * at the "Storage configuringation menu", use the down arrow to navigate do "Done", hit "enter", then go to "Continue" and hit enter
+   * at the "Profile setup screen", enter whatever name, server name, username, and password you like, then navigate to "Done" and hit "enter"
+   * hit "enter" to skip "Ubuntu Pro"
+   * install "Open SSH" if you'd like
+   * install whatever "Featured server snaps" you's like, then navigate to "Done" and hit enter
+   * after installation, navigate to "reboot now" option, then hit "enter"
 
 </details>
 
