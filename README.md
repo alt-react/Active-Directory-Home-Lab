@@ -9,7 +9,7 @@
 
 ___
 
-1) Set up a Home Lab in VirtualBox consisting of 4 VirtualBox virtual machines:
+1) Create 4 different virtual machines in VirtualBox:
 
      * 1 Windows 10 machine          
      * 1 Kali Linux Machine
