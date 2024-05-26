@@ -39,19 +39,14 @@ Set up and configure a Home Lab in VirtualBox focused on 4 virtual machines; a W
 <summary>3) Create the Windows 10 virtual machine in VirtualBox</summary>
 <br>
 
-   <details>
-   <summary>Download the Windows 10 ISO file</summary>
-   <br>
+  Download the Windows 10 ISO file
 
    * go to https://www.microsoft.com/en-ca/software-download/windows10 and click the blue "Download Tool now" button
    * run the installation file, choose the "Create installation media (USB flash drive, DVD, or ISO file) for another PC" option, and click next.
    * choose your desired language, architecture, and edition (or leave it as default), then click next
    * choose the ISO file option, then click next, then choose your download location
-   </details>
 
-   <details>
-   <summary>Configure the virtual machine environment to use for Windows 10 installation</summary>
-   <br>
+  Configure the virtual machine environment to use for Windows 10 installation
    
    * click the "New" button (blue spikey orb icon) in VirtualBox
    * enter the desired name of this virtual machine in the "Name" field
@@ -61,18 +56,14 @@ Set up and configure a Home Lab in VirtualBox focused on 4 virtual machines; a W
    * choose the desired RAM amount and number of CPUs to use for this virtual machine, then click "Next"
    * choose the desired storage configuration, then click "Next"
    * if you are happy with the configuration summary, click "Finish"
-   </details>
    
-   <details>
-   <summary>Install Windows 10 in the newly created virtual machine environment</summary>
-   <br>
+  Install Windows 10 in the newly created virtual machine environment
    
    * click "Start" (green arrow icon) in VirtualBox to start the virtual machine
    * click "Next" in the Windows installer, then click "Install Now"
    * click "I don't have a product key", then select "Windows 10 Pro" and click  "Next"
    * click "accept license terms", then click "Next"
    * select "Custom: Install Windows only (advanced), then click "Next"
-   </details>
    
 </details>
 
@@ -80,22 +71,16 @@ Set up and configure a Home Lab in VirtualBox focused on 4 virtual machines; a W
 <summary>4) Create the Kali Linux virtual machine in VirtualBox</summary>
 <br>
 
-   <details>
-   <summary>Download the Kali Linux ISO file</summary>
-   <br>
+  Download the Kali Linux ISO file
 
    * go to [Kali.org/get-kali](https://www.kali.org/get-kali) and click "Virtual Machines"
    * select your architecture, then click "VIrtualBox"
    * once your virtual machine image downloads, make sure 7-zip is installed, then double-click the extracted Kali Linux VirtualBox image
-   </details>
    
-   <details>
-   <summary>Run Kali Linux in VirtualBox</summary>
-   <br>
+  Run Kali Linux in VirtualBox
    
    * click "Start" (green arrow icon) in VirtualBox to start the virtual machine
    * login using "kali" as the username and "kali" as the password
-   </details>
 
 </details>
 
@@ -103,16 +88,11 @@ Set up and configure a Home Lab in VirtualBox focused on 4 virtual machines; a W
 <summary>5) Create the Ubuntu Server virtual machine in VirtualBox</summary>
 <br>
 
-   <details>
-   <summary>Download the Ubuntu Server ISO file</summary>
-   <br>
+   Download the Ubuntu Server ISO file
 
    * 
-   </details>
 
-   <details>
-   <summary>Configure the virtual machine environment to use for Ubuntu Server installation</summary>
-   <br>
+  Configure the virtual machine environment to use for Ubuntu Server installation
    
    * click the "New" button (blue spikey orb icon) in VirtualBox
    * enter the desired name of this virtual machine in the "Name" field
@@ -122,14 +102,10 @@ Set up and configure a Home Lab in VirtualBox focused on 4 virtual machines; a W
    * choose the desired RAM amount and number of CPUs to use for this virtual machine, then click "Next"
    * choose the desired storage configuration, then click "Next"
    * if you are happy with the configuration summary, click "Finish"
-   </details>
    
-   <details>
-   <summary>Install Ubuntu Server in the newly created virtual machine environment</summary>
-   <br>
+  Install Ubuntu Server in the newly created virtual machine environment
    
    * click "Start" (green arrow icon) in VirtualBox to start the virtual machine
-   </details>
 
 </details>
 
@@ -137,19 +113,13 @@ Set up and configure a Home Lab in VirtualBox focused on 4 virtual machines; a W
 <summary>6) Create the Windows Server 2022 virtual machine in VirtualBox</summary>
 <br>
 
-   <details>
-   <summary>Download the Windows Server 2022 ISO file</summary>
-   <br>
+  Download the Windows Server 2022 ISO file
 
    * search for "windows server 2022 iso" and click the "Windows Server 2022 | Microsoft Evaluation Center" link
    * click "Download the ISO" link, then fill out the information, and click the blue "Download Now" button
    * click the "64-bit edition" link to download the ISO
-   * 
-   </details>
 
-   <details>
-   <summary>Configure the virtual machine environment to use for Windows Server 2022 installation</summary>
-   <br>
+  Configure the virtual machine environment to use for Windows Server 2022 installation
    
    * click the "New" button (blue spikey orb icon) in VirtualBox
    * enter the desired name of this virtual machine in the "Name" field
@@ -159,27 +129,12 @@ Set up and configure a Home Lab in VirtualBox focused on 4 virtual machines; a W
    * choose the desired RAM amount and number of CPUs to use for this virtual machine, then click "Next"
    * choose the desired storage configuration, then click "Next"
    * if you are happy with the configuration summary, click "Finish"
-   </details>
    
-   <details>
-   <summary>Install Windows Server 2022 in the newly created virtual machine environment</summary>
-   <br>
+  Install Windows Server 2022 in the newly created virtual machine environment
    
    * click "Start" (green arrow icon) in VirtualBox to start the virtual machine
-   </details>
 
 </details>
-
-</details>
-
-<details>
-<summary></summary>
-<br>
-
-   
-
-</details>
-
 
 
 
