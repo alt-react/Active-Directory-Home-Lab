@@ -155,6 +155,7 @@ Set up and configure a Home Lab in VirtualBox focused on 4 virtual machines; a W
    * install "Open SSH" if you'd like
    * install whatever "Featured server snaps" you's like, then navigate to "Done" and hit enter
    * after installation, navigate to "reboot now" option, then hit "enter"
+   * if you see "cdrom failed to unmount error". hit "enter"
 
 </details>
 
