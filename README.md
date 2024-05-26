@@ -4,20 +4,20 @@
 
 1) Set up a Home Lab in VirtualBox consisting of 4 VirtualBox virtual machines:
 
-  - a Windows 10 machine
-  - a Kali Linux Machine
-  - a Windows Server 2022 machine
-  - an Ubuntu Server machine.
+    * a Windows 10 machine
+    * a Kali Linux Machine
+    * a Windows Server 2022 machine
+    * an Ubuntu Server machine.
 
 2) Install and configure Sysmon and Splunk on our:
 
-   - Windows 10 machine and
-   - Windows Server 2022 machine
+   * Windows 10 machine and
+   * Windows Server 2022 machine
 
      so they can:
 
-   - collect telemetry 
-   - send log to a Splunk server
+   * collect telemetry 
+   * send log to a Splunk server
 
 ### Tools Used
 
