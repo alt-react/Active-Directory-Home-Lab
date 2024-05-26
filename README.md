@@ -125,8 +125,8 @@ ___
 
   Download the Windows Server 2022 ISO file
 
-   * search for "windows server 2022 iso" and click the "Windows Server 2022 | Microsoft Evaluation Center" link
-   * click "Download the ISO" link, then fill out the information, and click the blue "Download Now" button
+   * search for "Windows Server 2022 iso" and click the "Windows Server 2022 | Microsoft Evaluation Center" link
+   * click the "Download the ISO" link, then fill out the information, and click the blue "Download Now" button
    * click the "64-bit edition" link to download the ISO
 
   Configure the virtual machine environment to use for Windows Server 2022 installation
@@ -147,7 +147,7 @@ ___
    * select "Windows 2022 Standard Evaluation (Desktop Experience)", then click "Next"
    * accept the "terms and agreements", then click "Next"
    * select "Custom: Install Microsoft Server Operating System only (advanced)", then click "Next"
-   * after installation, enter secure password, then click "Finish"
+   * after installation, enter a secure password, then click "Finish"
 
 </details>
 
@@ -178,13 +178,13 @@ ___
    * select "Try or Install Ubuntu Server" and hit the enter key
    * hit enter 6 times for default settings
    * at the "Mirror check still running" section, choose "continue", and hit enter
-   * at the "Guided storage configuration menu, use the down arrow to navigate to "Done" option, then hit "enter"
-   * at the "Storage configuringation menu", use the down arrow to navigate do "Done", hit "enter", then go to "Continue" and hit enter
+   * at the "Guided storage configuration menu, use the down arrow to navigate to the "Done" option, then hit "Enter"
+   * at the "Storage configuration menu", use the down arrow to navigate to "Done", hit "enter", then go to "Continue" and hit enter
    * at the "Profile setup screen", enter whatever name, server name, username, and password you like, then navigate to "Done" and hit "enter"
    * hit "enter" to skip "Ubuntu Pro"
    * install "Open SSH" if you'd like
-   * install whatever "Featured server snaps" you's like, then navigate to "Done" and hit enter
-   * after installation, navigate to "reboot now" option, then hit "enter"
+   * install whatever "Featured server snaps" you'd like, then navigate to "Done" and hit enter
+   * after installation, navigate to the "reboot now" option, then hit "enter"
    * if you see "cdrom failed to unmount error". hit "enter"
 
 </details>
@@ -197,8 +197,12 @@ ___
 <summary>Set VirtualBox settings to NAT network</summary>
 <br>
    
-   Why? So that  virtual machines can be on the same network, and still have internet access
-   
+   Why? So that  virtual machines can be on the same network and still have internet access
+
+   1) open VirtualBox, click on "Tools", then click on "Network"
+   2) click the "NAT Networks" tab, then click the "Create" button
+   3) click on the newly created "NatNetwork" then change "Name" to whatever you like (optional)
+   4) change 
 
 </details>
 
@@ -219,7 +223,7 @@ option 1
 ## Objective
 [Brief Objective - Remove this afterwards]
 
-The Detection Lab project aimed to establish a controlled environment for simulating and detecting cyber attacks. The primary focus was to ingest and analyze logs within a Security Information and Event Management (SIEM) system, generating test telemetry to mimic real-world attack scenarios. This hands-on experience was designed to deepen understanding of network security, attack patterns, and defensive strategies.
+The Detection Lab project aimed to establish a controlled environment for simulating and detecting cyber attacks. The primary focus was to ingest and analyze logs within a Security Information and Event Management (SIEM) system, generating test telemetry to mimic real-world attack scenarios. This hands-on experience was designed to deepen my understanding of network security, attack patterns, and defensive strategies.
 
 ### Skills Learned
 [Bullet Points - Remove this afterwards]
