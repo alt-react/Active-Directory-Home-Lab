@@ -37,9 +37,9 @@ To document the entire process of setting up a home lab to be used to gain exper
 
 - Draw.io - for creating the network diagram
 - VirtualBox - for creating the virtual network and the virtual machines
-- Windows Media Creation Tool
-- Sysmon
-- Splunk SIEM
+- Windows Media Creation Tool - to get Windows 10 ISO
+- Sysmon - to collect telemetry
+- Splunk SIEM - to organize and analyze logs
 
 ## Steps
 <details>
