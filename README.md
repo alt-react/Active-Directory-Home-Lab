@@ -9,20 +9,15 @@
   - a Windows Server 2022 machine
   - an Ubuntu Server machine.
 
-2) Install and configure:
+2) Install and configure Sysmon and Splunk on our:
 
-  - Sysmon 
-  - Splunk
+   - Windows 10 machine and
+   - Windows Server 2022 machine
 
-  on our:
+     so they can:
 
-  - Windows 10 machine
-  - Windows Server 2022 machine
-
-  so they can:
-
-  - collect telemetry
-  - send log to a Splunk server
+   - collect telemetry 
+   - send log to a Splunk server
 
 ### Tools Used
 
