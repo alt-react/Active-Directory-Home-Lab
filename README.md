@@ -90,7 +90,9 @@ Set up and configure a Home Lab in VirtualBox focused on 4 virtual machines; a W
 
    Download the Ubuntu Server ISO file
 
-   * 
+   * go to [ubuntu.com](https://www.ubuntu.com), go to the products tab, and click "Ubuntu Server"
+   * click the green "Download Ubuntu Server" button
+   * click the green "Download 24.04 LTS" button to start the download (version 24.04 LTS was the latest version when writing this)
 
   Configure the virtual machine environment to use for Ubuntu Server installation
    
@@ -133,6 +135,11 @@ Set up and configure a Home Lab in VirtualBox focused on 4 virtual machines; a W
   Install Windows Server 2022 in the newly created virtual machine environment
    
    * click "Start" (green arrow icon) in VirtualBox to start the virtual machine
+   * when Windows boots up, click "Next", then click "Install Now"
+   * select "Windows 2022 Standard Evaluation (Desktop Experience)", then click "Next"
+   * accept the "terms and agreements", then click "Next"
+   * select "Custom: Install Microsoft Server Operating System only (advanced)", then click "Next"
+   * after installation, enter secure password, then click "Finish"
 
 </details>
 
