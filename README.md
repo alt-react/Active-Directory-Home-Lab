@@ -4,12 +4,14 @@
 
 1) Set up a Home Lab in VirtualBox consisting of 4 VirtualBox virtual machines:
 
-    * a Windows 10 machine
-    * a Kali Linux Machine
-    * a Windows Server 2022 machine
-    * an Ubuntu Server machine.
-
-2) Install and configure Sysmon and Splunk on our:
+     * 1 Windows 10 machine          
+     * 1 Kali Linux Machine
+     * 1 Windows Server 2022 machine
+     * 1 Ubuntu Server machine       
+    
+    ![homeLabVMs](https://github.com/alt-react/Active-Directory-Home-Lab/assets/170683744/6be2c0df-a5c2-4eff-a646-3d03f733b11c)
+                                            
+3) Install and configure Sysmon and Splunk on our:
 
    * Windows 10 machine and
    * Windows Server 2022 machine
