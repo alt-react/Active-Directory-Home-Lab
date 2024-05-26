@@ -3,7 +3,7 @@
 ## Objectives
 
 > [!NOTE]
-> To document the entire process of setting up a home lab to be used to gain experience while doing hands-on cyber security portfolio projects.
+> To document the entire process of setting up a home lab to be used to gain hands-on cyber security project experience that will be added to my portfolio.
 > 
 > This repository will be updated in real-time as I progress through this project, so star it if you want to follow along.
 
