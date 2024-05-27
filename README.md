@@ -389,7 +389,7 @@ from our Windows 10 (target-PC):
 
    1) hit the "Windows" key, type in "notepad", run notepad as administrator, and click "yes"
 
-Enter the following text into notepad:
+   Enter the following text into notepad:
 
          [WinEventLog://Application]
          index = endpoint
@@ -409,7 +409,9 @@ Enter the following text into notepad:
          renderXml = true
          source = XmlWinEventLog:Microsoft-Windows-Sysmon/Operational
 
-and save the file as `C:\Program Files\SplunkUniversalForwarder\etc\system\local\inputs.conf`
+   and save the file to `C:\Program Files\SplunkUniversalForwarder\etc\system\local\` folder
+
+   in the "Save as type" section, click text, and select "All Files, then in the "File name:" section, type "inputs.conf", and click "Save"
 
    2) 
    3) 
