@@ -44,7 +44,7 @@ ___
 
 ## Steps
 <details>
-<summary>Create the network diagram</summary>
+<summary>1) Create the network diagram</summary>
 <br>
 
   ![AltReact-Initial_Network_Diagram-50%](https://github.com/alt-react/Active-Directory-Home-Lab/assets/170683744/ce5c58f5-1c5c-4503-8424-2a74cc196a04)
@@ -55,7 +55,7 @@ ___
 
 ___
 
-### Create Virtual Machines
+### 2) Create Virtual Machines
 
 <details>
 <summary>Download and install VirtualBox</summary>
@@ -206,7 +206,7 @@ For each virtual machine:
 
 ---
 
-### Set up and configure the Home Lab network in VirtualBox
+### 3) Set up and configure the Home Lab network in VirtualBox
 
 <details>
 <summary>Create a NAT network in VirtualBox</summary>
@@ -234,7 +234,7 @@ For each of the 4 virtual machines, complete the following steps:
 
 ___
 
-### Set up and configure the Ubuntu Server (Splunk SIEM) virtual machine
+### 4) Set up and configure the Ubuntu Server (Splunk SIEM) virtual machine
 
 <details>
 <summary>Configure static IP address on Ubuntu Server (Splunk SIEM) virtual machine</summary>
