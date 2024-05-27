@@ -384,11 +384,11 @@ from our Windows 10 (target-PC):
 </details>
 
 <details>
-<summary>Instruct our Splunk Forwarder on what we want to send to our Splunk Server</summary>
+<summary>Configure Splunk Forwarder on Windows 10 (target-PC) machine</summary>
 <br>
 
    1) hit the "Windows" key, type in "notepad", run notepad as administrator, and click "yes"
-
+      
    Enter the following text into notepad:
 
          [WinEventLog://Application]
@@ -412,10 +412,12 @@ from our Windows 10 (target-PC):
    and save the file to `C:\Program Files\SplunkUniversalForwarder\etc\system\local\` folder
 
    in the "Save as type" section, click text, and select "All Files, then in the "File name:" section, type "inputs.conf", and click "Save"
-
-   2) 
-   3) 
-
+   
+   2) hit the "Windows" key, type "services", and click "Run as administrator"
+   3) scroll down and double-click on "SplunkForwarder"
+   4) click the "Log On" tab, then click the "Local System account" radio button, click "Apply", then click "OK"
+   5) right-click "SplunkFowarder", click "Restart", if you get a pop up saying that Windows could not stop the SplunkForwarder service, click "OK", then click "Start the service"
+   6) 
 
 </details>
 
@@ -440,7 +442,7 @@ from our Windows 10 (target-PC):
 
 <!--
 
-left off at - Active Directory Project (Home Lab) | Part 3 - 12:31
+left off at - Active Directory Project (Home Lab) | Part 3 - 23:15
 
 <details>
 <summary></summary>
