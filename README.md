@@ -39,7 +39,9 @@ ___
 - Draw.io - for creating the network diagram
 - VirtualBox - for creating and running the virtual network and the virtual machines
 - Windows Media Creation Tool - to get Windows 10 ISO
-- Splunk SIEM - to organize and analyze logs
+- Splunk SIEM - to organize logs in and analyze logs from 1 place
+- Splunk Universal Forwarder - 
+- Sysmon - 
 
 ## Steps
 <details>
