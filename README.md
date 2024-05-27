@@ -11,7 +11,7 @@ ___
 
 1) Create 4 different virtual machines in VirtualBox:
 
-    * 1 Windows 10 machine (target)
+    * 1 Windows 10 machine (target-PC)
     * 1 Kali Linux machine (attacker)
     * 1 Windows Server 2022 machine (Active Directory Domain Controller)
     * 1 Ubuntu Server machine (Splunk SIEM)
@@ -191,7 +191,7 @@ ___
 ---
 
 <details> 
-<summary>Enable copy / paste between host and virtual machines in VirtualBox</summary> 
+<summary>Enable copy/paste between host and virtual machines in VirtualBox</summary> 
 <br>
 
 Open up VirtualBox
@@ -305,18 +305,38 @@ In your Ubuntu Server virtual machine:
    2) type in `sudo dpkg -i splunk`, hit the "tab" key to autocomplete the filename, then hit "Enter" to install Splunk
    3) type `cd /opt/splunk/bin`, hit "Enter", then type in `sudo -u splunk bash`, and hit "Enter"
    4) type in `./splunk start`, hit "Enter", hit "q", hit "y", then hit "Enter"
-   5) enter a username, enter a password, re-enter the password, then hit "Enter"
+   5) enter a username, enter a password, re-enter the password, and hit "Enter"
    6)  type `exit`, hit "Enter", type `cd bin`, hit "Enter", then type in `sudo ./splunk enable boot-start -user splunk`, and hit "Enter"
 
 </details>
 
 ---
 
-### 5) Set up and configure Windows 10 (target) virtual machine
+### 5) Set up and configure Windows 10 (target-PC) virtual machine
 
+<details>
+<summary>Change hostname to "target-PC"</summary>
+<br>
 
+   1) in the Windows taskbar, search for "PC", click "Properties", then click the "Rename this PC" button
+   2) type in `target-PC`, click "Next", then click "Restart now
 
+</details>
 
+---
+
+<details>
+<summary>Set the static IP address for Windows 10 (target-PC)</summary>
+<br>
+
+   1) hit the "Windows" key, type in "cmd", and hit enter
+   2) in the command prompt, type in `ipcongif`, and hit "Enter" to check the IP address
+   3) at the right end of the taskbar, right-click the "network" icon and click "Open Network & Internet settings"
+   4) scroll down and click on "Change adapter options", right-click the network adapter, and click on "Properties"
+   5) double-click "Internet Protocol Version 4 (TCP/IPv4)", and click the "Use the following IP address:" radio button
+   6) 
+
+</details>
 
 
 
