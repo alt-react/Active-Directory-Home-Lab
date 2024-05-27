@@ -363,13 +363,59 @@ from our Windows 10 (target-PC):
    7) for the username, type in "admin", leave the "generate random password" option checked, and click "Next"
    8) since we don't have a Splunk Deployment Server, leave this section blank, and click "Next"
    9) under "Receiving Indexer" in the "Hostname or IP" section, enter the IP of our Ubuntu (Splunk) Server, which is `192.168.10.10`, type in the default port `9997` in the field to the right of the colon, and click "Next"
-   10) click "Install, for the pop-up window asking if we want to allow this app to make changes to our device, click "yes", and when the install finishes, click "FInish"
-   11) 
+   10) click "Install, for the pop-up window asking if we want to allow this app to make changes to our device, click "yes", and when the install finishes, click "Finish"
 
 </details>
 
+<details>
+<summary>Install Sysmon on Window 10 (target0-PC)</summary>
+<br>
+
+   1) open a web browser and search for "Sysmon", and click the link that shows "Sysmon - Sysinternals"
+   2) scroll down and click the " Download Sysmon" link
+   3) do a web search for "sysmon olaf config", click on the "Github - olafhartong/sysmon-modular" link, scroll down, and click the "sysmonconfig.xml" file
+   4) click the "raw" option on the top-right of the page, right-click and save the file
+   5)  navigate to the directory we downloaded sysmonconfig.xml to, click on the file to select it, right-click the file, click "Extract all", then click the "Extract" button
+   6)  in the window that just popped up, click the file explorer bar, right-click the folder path, then click "Copy"
+   7)  hit the "Windows" key, type in "powershell", run powershell as administrator, then click "yes"
+   8)  type in `cd` followed by a single space, then right-click inside powershell to past the folder path we just copied in the previous step, and hit "Enter"
+   9)  type in `.\Sysmon64.exe -i ..\sysmonconfig.xml`, hit "Enter", then click "Agree" to install Sysmon using our sysmonconfig.xml configuration file
+
+</details>
+
+<details>
+<summary>Instruct our Splunk Forwarder on what we want to send to our Splunk Server</summary>
+<br>
+
+   1) hit the "Windows" key, type in "notepad", run notepad as administrator, and click "yes"
+
+Enter the following text into notepad:
+
+         [WinEventLog://Application]
+         index = endpoint
+         disabled = false
+
+         [WinEventLog://Security]
+         index = endpoint
+         disabled = false
+
+         [WinEventLog://System]
+         index = endpoint
+         disabled = false
+
+         [WinEventLog://Microsoft-Windows-Sysmon/Operational]
+         index = endpoint
+         disabled = false
+         renderXml = true
+         source = XmlWinEventLog:Microsoft-Windows-Sysmon/Operational
+
+and save the file as `C:\Program Files\SplunkUniversalForwarder\etc\system\local\inputs.conf`
+
+   2) 
+   3) 
 
 
+</details>
 
 
 
