@@ -37,7 +37,7 @@ ___
 </details>
 
 - Draw.io - for creating the network diagram
-- VirtualBox - for creating the virtual network and the virtual machines
+- VirtualBox - for creating and running the virtual network and the virtual machines
 - Windows Media Creation Tool - to get Windows 10 ISO
 - Splunk SIEM - to organize and analyze logs
 
