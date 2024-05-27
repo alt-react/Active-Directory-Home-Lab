@@ -12,7 +12,7 @@ ___
 1) Create 4 different virtual machines in VirtualBox:
 
     * 1 Windows 10 machine (target)
-    * 1 Kali Linux Machine (attacker)
+    * 1 Kali Linux machine (attacker)
     * 1 Windows Server 2022 machine (Active Directory Domain Controller)
     * 1 Ubuntu Server machine (Splunk SIEM)
     
