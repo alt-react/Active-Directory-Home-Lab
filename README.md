@@ -193,6 +193,8 @@ ___
 
 </details>
 
+<!--
+
 ---
 
 <details> 
@@ -207,6 +209,8 @@ For each virtual machine:
   2) on the "General" page, click the "Advanced" tab, set "Shared Clipboard" to "Bidirectional", and click "OK"
 
 </details>
+
+-->
 
 ---
 
@@ -285,7 +289,6 @@ ___
    11) log back into the Ubuntu Server, then type `sudo adduser *your username* vboxsf`, and hit "Enter"
    12) type 'mkdir share', hit "Enter", then type `ls`, and hit "Enter"
    13) type in `sudo mount -t vboxsf -o uid=1000,gid=1000 Active-Directory-Home-Lab`, then hit "Enter"
-   14) 
 
 </details>
 
@@ -299,17 +302,19 @@ ___
    4) under "Choose Your Installation Package", click the "Linux" option, then click the "Download Now" button for the ".deb" option
    5) scroll through the Splunk General Terms document, click the "I have read, understood, etc" box, then click the Access program" button to start the Splunk download
    6) move the "spunk*.dev file into the "Active-Directory-Home-Lab" folder we created in step 1 of the previous section
-   
-   
-    
-    
-    
+   7) in your Ubuntu Server virtual machine, type `cd && cd share` then hit "Enter"
+   8) type in `sudo dpkg -i splunk`, hit the "tab" key to autocomplete the filename, then hit "Enter" to install Splunk
+   9) type `cd /opt/splunk/bin`, hit "Enter", then type in `sudo -u splunk bash`, and hit "Enter"
+   10) type in `./splunk start`, hit "Enter", hit "q", hit "y", then hit "Enter"
+   11) enter a username, enter a password, re-enter the password, then hit "Enter"
+   12)  type `exit`, hit "Enter", type `cd bin`, hit "Enter", then type in `sudo ./splunk enable boot-start -user splunk`, and hit "Enter"
+
 </details>
 
 
 <!--
 
-left off at - Active Directory Project (Home Lab) | Part 3 - 9:42
+left off at - Active Directory Project (Home Lab) | Part 3 - 12:31
 
 -->
 
