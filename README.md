@@ -309,6 +309,8 @@ In your Ubuntu Server virtual machine:
 
 </details>
 
+---
+
 ### 5) Set up and configure Windows 10 (attacker) virtual machine
 
 
