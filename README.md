@@ -350,11 +350,19 @@ from our Windows 10 (target-PC):
 
    1) open a web browser and type in `192.168.10.10:8000` to verify that we can reach our Splunk log-in page
 
-Install Splunk Universal Forwarder on Windows 10 (target-PC)
+Install and configure Splunk Universal Forwarder on Windows 10 (target-PC)
 
    1) open up a web browser, go to [splunk.com](https://www.splunk.com) and log in
    2) hover the mouse over the "Products" tab, and click on "Free Trials & Downloads"
-   3) 
+   3) scroll down to "Universal Forwarder" and click the "Get My Free Download" button
+   4) go to the "64-bit" section of the "Windows" tab and click the "Download Now" button
+   5) read the "Splunk General Terms", select the "I have read, understood, etc." option, and click the "Access program" button
+   6) open the "splunkforwarder*.msi" download, read the "License Agreement", check the box to accept the license agreement, make sure the "An on-premises Splunk Enterprise instance" option is selected, and click "Next"
+   7) for the username, type in "admin", leave the "generate random password" option checked, and click "Next"
+   8) since we don't have a Splunk Deployment Server, leave this section blank, and click "Next"
+   9) under "Receiving Indexer" in the "Hostname or IP" section, enter the IP of our Ubuntu (Splunk) Server, which is `192.168.10.10`, type in the default port `9997` in the field to the right of the colon, and click "Next"
+   10) click "Install, for the pop-up window asking if we want to allow this app to make changes to our device, click "yes", and when the install finishes, click "FInish"
+   11) 
 
 </details>
 
