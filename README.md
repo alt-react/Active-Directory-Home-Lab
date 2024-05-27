@@ -34,7 +34,7 @@ ___
       * 4-core 8-threads processor
       * 16 GB RAM
       * 250 GB free storage
-</details>
+</details>         
 
 - Draw.io - for creating the network diagram
 - VirtualBox - for creating and running the virtual network and the virtual machines
@@ -330,15 +330,31 @@ In your Ubuntu Server virtual machine:
 <br>
 
    1) hit the "Windows" key, type in "cmd", and hit enter
-   2) in the command prompt, type in `ipcongif`, and hit "Enter" to check the IP address
+   2) in the command prompt, type in `ipcongif`, and hit "Enter" to check the IP address to view our current IP address
    3) at the right end of the taskbar, right-click the "network" icon and click "Open Network & Internet settings"
    4) scroll down and click on "Change adapter options", right-click the network adapter, and click on "Properties"
    5) double-click "Internet Protocol Version 4 (TCP/IPv4)", and click the "Use the following IP address:" radio button
-   6) 
+   6) in the "IP address" field, type in `192.168.10.100`, in the Subnet mask section, type in `255.255.255.0`, and in the "Default gateway" section, type in `192.168.10.1`
+   7) in the "Preferred DNS server:" section, type in `8.8.8.8`, then click "OK", and close the window
+   8) in the command prompt, enter `ipconfig` to verify that our IPv4 Address is 192.168.10.100
 
 </details>
 
+<details>
+<summary>Access Splunk from our Windows 10 (target-PC)</summary>
+<br>
 
+Make sure our Ubuntu Server virtual machine is running, then:
+
+from our Windows 10 (target-PC):
+
+   1) open a web browser and type in `192.168.10.10:8000` to verify that we can reach our Splunk log-in page
+
+Install Splunk Universal Forwarder on Windows 10 (target-PC)
+
+
+
+</details>
 
 
 
