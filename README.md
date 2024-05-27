@@ -39,8 +39,8 @@ ___
 - Draw.io - for creating the network diagram
 - VirtualBox - for creating and running the virtual network and the virtual machines
 - Windows Media Creation Tool - to get Windows 10 ISO
-- Splunk SIEM - to organize logs in and to analyze logs from 1 place
-- Splunk Universal Forwarder - 
+- Splunk SIEM - to organize logs in and analyze logs from 1 place
+- Splunk Universal Forwarder - to securely collect and send data from machines to our Splunk instance
 - Sysmon - 
 
 ## Steps
@@ -353,7 +353,8 @@ from our Windows 10 (target-PC):
 Install Splunk Universal Forwarder on Windows 10 (target-PC)
 
    1) open up a web browser, go to [splunk.com](https://www.splunk.com) and log in
-   2) 
+   2) hover the mouse over the "Products" tab, and click on "Free Trials & Downloads"
+   3) 
 
 </details>
 
