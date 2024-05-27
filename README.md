@@ -20,9 +20,9 @@ ___
 
 2) Create a network in VirtualBox, and add our virtual machines to that same network
 
-3) Configure Ubuntu Server and install Splunk
+3) Configure the Ubuntu Server and install Splunk
 
-4) Install Splunk Universal Forwarder and Sysmon on both the Windows 10 (target) virtual machine and on the Windows Server 2022 (Active Directory Domain Controller)
+4) Install Splunk Universal Forwarder and Sysmon on both the Windows 10 (target) virtual machine and the Windows Server 2022 (Active Directory Domain Controller)
 
 ### Tools Used
 
