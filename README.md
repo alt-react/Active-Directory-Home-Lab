@@ -31,7 +31,7 @@ ___
 <br>
 
    * minimum specs
-      * 4-core processor
+      * 4-core 8-threads processor
       * 16 GB RAM
       * 250 GB free storage
 </details>
@@ -39,7 +39,6 @@ ___
 - Draw.io - for creating the network diagram
 - VirtualBox - for creating the virtual network and the virtual machines
 - Windows Media Creation Tool - to get Windows 10 ISO
-- Sysmon - to collect telemetry
 - Splunk SIEM - to organize and analyze logs
 
 ## Steps
