@@ -323,8 +323,6 @@ In your Ubuntu Server virtual machine:
 
 </details>
 
----
-
 <details>
 <summary>Set the static IP address for Windows 10 (target-PC)</summary>
 <br>
@@ -341,7 +339,7 @@ In your Ubuntu Server virtual machine:
 </details>
 
 <details>
-<summary>Access Splunk from our Windows 10 (target-PC)</summary>
+<summary>Verify that Splunk on our Ubuntu Server is accessible from our Windows 10 (target-PC)</summary>
 <br>
 
 Make sure our Ubuntu Server virtual machine is running, then:
@@ -350,7 +348,11 @@ from our Windows 10 (target-PC):
 
    1) open a web browser and type in `192.168.10.10:8000` to verify that we can reach our Splunk log-in page
 
-Install and configure Splunk Universal Forwarder on Windows 10 (target-PC)
+</details>
+
+<details>
+<summary>Install and configure Splunk Universal Forwarder on Windows 10 (target-PC)</summary>
+<br>
 
    1) open up a web browser, go to [splunk.com](https://www.splunk.com) and log in
    2) hover the mouse over the "Products" tab, and click on "Free Trials & Downloads"
