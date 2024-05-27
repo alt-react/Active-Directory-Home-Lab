@@ -417,15 +417,186 @@ from our Windows 10 (target-PC):
    3) scroll down and double-click on "SplunkForwarder"
    4) click the "Log On" tab, then click the "Local System account" radio button, click "Apply", then click "OK"
    5) right-click "SplunkFowarder", click "Restart", if you get a pop up saying that Windows could not stop the SplunkForwarder service, click "OK", then click "Start the service"
-   6) 
 
 </details>
 
+---
+
+### 6) Continue Splunk Server configuration
+
+<details>
+<summary>Configuring Splunk Server to accept logs from the Windows 10 (target-PC) machine</summary>
+<br>
+
+   1) open a web browser, go to `192.168.10.10:8000`, and log into Splunk Server
+   2) at the top of the window, select "Settings", then select "Indexes"
+   3) click "OK" then at the top-right, click "New Index"
+   4) in the "Index Name" field, type in "endpoint", and click "Save"
+   5) at the top of the window, click on "Settings", then click on "Forwarding and receiving"
+   6) under "Received data", click on "Configuring receiving", click on "New Receiving Port", then type `9997` in the "Listen on this port" section, and click "Save"
+
+If everything has been set up correctly up to this point, we should be receiving data from our Windows 10 (target-PC) into Splunk on our Ubuntu Server. To verify:
+
+   1) click on "Apps" in the top-left corner, click on "Search & Reporting", and click "Skip", and click "Skip tour"
+   2) in the input field under "Search", type in `index=endpoint`, then click on the green magnifying glass search button
+
+ I you see the following values:
+ 
+    * WinEventLog:Security
+    * WinEventLog:System
+    * WinEventLog:Application
+    * XmlWinEventLog:Microsoft-Windows-Sysmon/Operational
+
+You have installed everything correctly.
+
+</details>
+
+ 
+---
+
+### 7) Set up and configure Windows Server 2022 (Active Directory Domain Controller) virtual machine
+
+<details>
+<summary>Change hostname to "ADDC01"</summary>
+<br>
 
 
+<!--
 
+   1) in the Windows taskbar, search for "PC", click "Properties", then click the "Rename this PC" button
+   2) type in `target-PC`, click "Next", then click "Restart now
 
+</details>
 
+<details>
+<summary>Set the static IP address for Windows 10 (target-PC)</summary>
+<br>
+
+   1) hit the "Windows" key, type in "cmd", and hit enter
+   2) in the command prompt, type in `ipcongif`, and hit "Enter" to check the IP address to view our current IP address
+   3) at the right end of the taskbar, right-click the "network" icon and click "Open Network & Internet settings"
+   4) scroll down and click on "Change adapter options", right-click the network adapter, and click on "Properties"
+   5) double-click "Internet Protocol Version 4 (TCP/IPv4)", and click the "Use the following IP address:" radio button
+   6) in the "IP address" field, type in `192.168.10.100`, in the Subnet mask section, type in `255.255.255.0`, and in the "Default gateway" section, type in `192.168.10.1`
+   7) in the "Preferred DNS server:" section, type in `8.8.8.8`, then click "OK", and close the window
+   8) in the command prompt, enter `ipconfig` to verify that our IPv4 Address is 192.168.10.100
+
+</details>
+
+<details>
+<summary>Verify that Splunk on our Ubuntu Server is accessible from our Windows 10 (target-PC)</summary>
+<br>
+
+Make sure our Ubuntu Server virtual machine is running, then:
+
+from our Windows 10 (target-PC):
+
+   1) open a web browser and type in `192.168.10.10:8000` to verify that we can reach our Splunk log-in page
+
+</details>
+
+<details>
+<summary>Install and configure Splunk Universal Forwarder on Windows 10 (target-PC)</summary>
+<br>
+
+   1) open up a web browser, go to [splunk.com](https://www.splunk.com) and log in
+   2) hover the mouse over the "Products" tab, and click on "Free Trials & Downloads"
+   3) scroll down to "Universal Forwarder" and click the "Get My Free Download" button
+   4) go to the "64-bit" section of the "Windows" tab and click the "Download Now" button
+   5) read the "Splunk General Terms", select the "I have read, understood, etc." option, and click the "Access program" button
+   6) open the "splunkforwarder*.msi" download, read the "License Agreement", check the box to accept the license agreement, make sure the "An on-premises Splunk Enterprise instance" option is selected, and click "Next"
+   7) for the username, type in "admin", leave the "generate random password" option checked, and click "Next"
+   8) since we don't have a Splunk Deployment Server, leave this section blank, and click "Next"
+   9) under "Receiving Indexer" in the "Hostname or IP" section, enter the IP of our Ubuntu (Splunk) Server, which is `192.168.10.10`, type in the default port `9997` in the field to the right of the colon, and click "Next"
+   10) click "Install, for the pop-up window asking if we want to allow this app to make changes to our device, click "yes", and when the install finishes, click "Finish"
+
+</details>
+
+<details>
+<summary>Install Sysmon on Window 10 (target0-PC)</summary>
+<br>
+
+   1) open a web browser and search for "Sysmon", and click the link that shows "Sysmon - Sysinternals"
+   2) scroll down and click the " Download Sysmon" link
+   3) do a web search for "sysmon olaf config", click on the "Github - olafhartong/sysmon-modular" link, scroll down, and click the "sysmonconfig.xml" file
+   4) click the "raw" option on the top-right of the page, right-click and save the file
+   5)  navigate to the directory we downloaded sysmonconfig.xml to, click on the file to select it, right-click the file, click "Extract all", then click the "Extract" button
+   6)  in the window that just popped up, click the file explorer bar, right-click the folder path, then click "Copy"
+   7)  hit the "Windows" key, type in "powershell", run powershell as administrator, then click "yes"
+   8)  type in `cd` followed by a single space, then right-click inside powershell to past the folder path we just copied in the previous step, and hit "Enter"
+   9)  type in `.\Sysmon64.exe -i ..\sysmonconfig.xml`, hit "Enter", then click "Agree" to install Sysmon using our sysmonconfig.xml configuration file
+
+</details>
+
+<details>
+<summary>Configure Splunk Forwarder on Windows 10 (target-PC) machine</summary>
+<br>
+
+   1) hit the "Windows" key, type in "notepad", run notepad as administrator, and click "yes"
+      
+   Enter the following text into notepad:
+
+         [WinEventLog://Application]
+         index = endpoint
+         disabled = false
+
+         [WinEventLog://Security]
+         index = endpoint
+         disabled = false
+
+         [WinEventLog://System]
+         index = endpoint
+         disabled = false
+
+         [WinEventLog://Microsoft-Windows-Sysmon/Operational]
+         index = endpoint
+         disabled = false
+         renderXml = true
+         source = XmlWinEventLog:Microsoft-Windows-Sysmon/Operational
+
+   and save the file to `C:\Program Files\SplunkUniversalForwarder\etc\system\local\` folder
+
+   in the "Save as type" section, click text, and select "All Files, then in the "File name:" section, type "inputs.conf", and click "Save"
+   
+   2) hit the "Windows" key, type "services", and click "Run as administrator"
+   3) scroll down and double-click on "SplunkForwarder"
+   4) click the "Log On" tab, then click the "Local System account" radio button, click "Apply", then click "OK"
+   5) right-click "SplunkFowarder", click "Restart", if you get a pop up saying that Windows could not stop the SplunkForwarder service, click "OK", then click "Start the service"
+
+</details>
+
+---
+
+### 6) Continue Splunk Server configuration
+
+<details>
+<summary>Configuring Splunk Server to accept logs from the Windows 10 (target-PC) machine</summary>
+<br>
+
+   1) open a web browser, go to `192.168.10.10:8000`, and log into Splunk Server
+   2) at the top of the window, select "Settings", then select "Indexes"
+   3) click "OK" then at the top-right, click "New Index"
+   4) in the "Index Name" field, type in "endpoint", and click "Save"
+   5) at the top of the window, click on "Settings", then click on "Forwarding and receiving"
+   6) under "Received data", click on "Configuring receiving", click on "New Receiving Port", then type `9997` in the "Listen on this port" section, and click "Save"
+
+If everything has been set up correctly up to this point, we should be receiving data from our Windows 10 (target-PC) into Splunk on our Ubuntu Server. To verify:
+
+   1) click on "Apps" in the top-left corner, click on "Search & Reporting", and click "Skip", and click "Skip tour"
+   2) in the input field under "Search", type in `index=endpoint`, then click on the green magnifying glass search button
+
+ I you see the following values:
+ 
+    * WinEventLog:Security
+    * WinEventLog:System
+    * WinEventLog:Application
+    * XmlWinEventLog:Microsoft-Windows-Sysmon/Operational
+
+You have installed everything correctly.
+
+</details>
+
+-->
 
 
 
@@ -442,7 +613,7 @@ from our Windows 10 (target-PC):
 
 <!--
 
-left off at - Active Directory Project (Home Lab) | Part 3 - 23:15
+left off at - Active Directory Project (Home Lab) | Part 3 - 26:17
 
 <details>
 <summary></summary>
