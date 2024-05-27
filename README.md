@@ -352,7 +352,8 @@ from our Windows 10 (target-PC):
 
 Install Splunk Universal Forwarder on Windows 10 (target-PC)
 
-
+   1) open up a web browser, go to [splunk.com](https://www.splunk.com) and log in
+   2) 
 
 </details>
 
