@@ -311,7 +311,7 @@ In your Ubuntu Server virtual machine:
 
 ---
 
-### 5) Set up and configure Windows 10 (attacker) virtual machine
+### 5) Set up and configure Windows 10 (target) virtual machine
 
 
 
