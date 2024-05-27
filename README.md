@@ -3,7 +3,7 @@
 ## Objectives
 
 > [!NOTE]
-> To document the entire process of setting up a home lab to be used to gain hands-on cyber security project experience that will be added to my portfolio.
+> To document the entire process of setting up an Active Directory / Cyber Security Home Lab to be used for hands-on IT project experience for my portfolio.
 > 
 > This repository will be updated in real-time as I progress through this project, so star it if you want to follow along.
 
@@ -11,26 +11,18 @@ ___
 
 1) Create 4 different virtual machines in VirtualBox:
 
-     * 1 Windows 10 machine          
-     * 1 Kali Linux Machine
-     * 1 Windows Server 2022 machine
-     * 1 Ubuntu Server machine       
+    * 1 Windows 10 machine (target)
+    * 1 Kali Linux Machine (attacker)
+    * 1 Windows Server 2022 machine (Active Directory Domain Controller)
+    * 1 Ubuntu Server machine (Splunk SIEM)
     
     ![homeLabVMs](https://github.com/alt-react/Active-Directory-Home-Lab/assets/170683744/6be2c0df-a5c2-4eff-a646-3d03f733b11c)
 
 2) Create a network in VirtualBox, and add our virtual machines to that same network
 
-3) Configure static IP addresses on each virtual machine
-                                            
-4) Install and configure Sysmon and Splunk on our:
+3) Configure Ubuntu Server and install Splunk
 
-   * Windows 10 machine and
-   * Windows Server 2022 machine
-
-     so they can:
-
-   * collect telemetry 
-   * send log to a Splunk server
+4) Install Splunk Universal Forwarder and Sysmon on both the Windows 10 (target) virtual machine and on the Windows Server 2022 (Active Directory Domain Controller)
 
 ### Tools Used
 
@@ -57,7 +49,7 @@ ___
 
   ![AltReact-Initial_Network_Diagram-50%](https://github.com/alt-react/Active-Directory-Home-Lab/assets/170683744/ce5c58f5-1c5c-4503-8424-2a74cc196a04)
 
-  * you can do this in [Draw.io](https://www.draw.io)
+  * you can design whatever network diagram you'd like to in [Draw.io](https://www.draw.io)
 
 </details>
 
@@ -242,6 +234,8 @@ For each of the 4 virtual machines, complete the following steps:
 
 ___
 
+### Set up and configure the Ubuntu Server (Splunk SIEM) virtual machine
+
 <details>
 <summary>Configure static IP address on Ubuntu Server (Splunk SIEM) virtual machine</summary>
 <br>
@@ -270,8 +264,6 @@ ___
 
 </details>
 
-___
-
 <details>
 <summary>Set up folder sharing between VirtualBox host and Ubuntu Server virtual machine</summary>
 <br>
@@ -296,25 +288,69 @@ ___
 <summary>Download and install Splunk on Ubuntu Server (Splunk SIEM)</summary>
 <br>
 
-   1) on your host machine (not on any of your virtual machines, but on the machine running your virtual machines), go to [splunk.com](https://www.splunk.com), sign up with an account, and log in
+On your host machine:
+(not on any of your virtual machines, but on the machine running your virtual machines)
+
+   1) go to [splunk.com](https://www.splunk.com), sign up with an account, and log in
    2) got to the "Products" tab, then click on "Free Trials & Downloads"
    3) scroll down to "Splunk Enterprise" and click on "Get My Free Trial"
    4) under "Choose Your Installation Package", click the "Linux" option, then click the "Download Now" button for the ".deb" option
    5) scroll through the Splunk General Terms document, click the "I have read, understood, etc" box, then click the Access program" button to start the Splunk download
    6) move the "spunk*.dev file into the "Active-Directory-Home-Lab" folder we created in step 1 of the previous section
-   7) in your Ubuntu Server virtual machine, type `cd && cd share` then hit "Enter"
-   8) type in `sudo dpkg -i splunk`, hit the "tab" key to autocomplete the filename, then hit "Enter" to install Splunk
-   9) type `cd /opt/splunk/bin`, hit "Enter", then type in `sudo -u splunk bash`, and hit "Enter"
-   10) type in `./splunk start`, hit "Enter", hit "q", hit "y", then hit "Enter"
-   11) enter a username, enter a password, re-enter the password, then hit "Enter"
-   12)  type `exit`, hit "Enter", type `cd bin`, hit "Enter", then type in `sudo ./splunk enable boot-start -user splunk`, and hit "Enter"
+
+In your Ubuntu Server virtual machine:
+
+   1) type `cd && cd share` then hit "Enter"
+   2) type in `sudo dpkg -i splunk`, hit the "tab" key to autocomplete the filename, then hit "Enter" to install Splunk
+   3) type `cd /opt/splunk/bin`, hit "Enter", then type in `sudo -u splunk bash`, and hit "Enter"
+   4) type in `./splunk start`, hit "Enter", hit "q", hit "y", then hit "Enter"
+   5) enter a username, enter a password, re-enter the password, then hit "Enter"
+   6)  type `exit`, hit "Enter", type `cd bin`, hit "Enter", then type in `sudo ./splunk enable boot-start -user splunk`, and hit "Enter"
 
 </details>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 <!--
 
 left off at - Active Directory Project (Home Lab) | Part 3 - 12:31
+
+<details>
+<summary></summary>
+<br>
+
+   1)
+
+</details>
 
 -->
 
@@ -326,82 +362,66 @@ option 1
 ## Objective
 [Brief Objective - Remove this afterwards]
 
-The Detection Lab project aimed to establish a controlled environment for simulating and detecting cyber attacks. The primary focus was to ingest and analyze logs within a Security Information and Event Management (SIEM) system, generating test telemetry to mimic real-world attack scenarios. This hands-on experience was designed to deepen my understanding of network security, attack patterns, and defensive strategies.
-
 ### Skills Learned
 [Bullet Points - Remove this afterwards]
 
-- Advanced understanding of SIEM concepts and practical application.
-- Proficiency in analyzing and interpreting network logs.
-- Ability to generate and recognize attack signatures and patterns.
-- Enhanced knowledge of network protocols and security vulnerabilities.
-- Development of critical thinking and problem-solving skills in cybersecurity.
 
 ### Tools Used
 [Bullet Points - Remove this afterwards]
 
-- Security Information and Event Management (SIEM) system for log ingestion and analysis.
-- Network analysis tools (such as Wireshark) for capturing and examining network traffic.
-- Telemetry generation tools to create realistic network traffic and attack scenarios.
-
 ## Steps
-drag & drop screenshots here or use imgur and reference them using imgsrc
 
-Every screenshot should have some text explaining what the screenshot is about.
+-->
 
-Example below.
-
-*Ref 1: Network Diagram*
+<!--
 
 option 2
 
-<h1>JWipe - Disk Sanitization</h1>
+<h1>Project Name</h1>
 
- ### [YouTube Demonstration](https://youtu.be/7eJexJVCqJo)
+ ### [YouTube Demonstration](https://)
 
 <h2>Description</h2>
-Project consists of a simple PowerShell script that walks the user through "zeroing out" (wiping) any drives that are connected to the system. The utility allows you to select the target disk and choose the number of passes that are performed. The PowerShell script will configure a diskpart script file based on the user's selections and then launch Diskpart to perform the disk sanitization.
-<br />
 
+<br />
 
 <h2>Languages and Utilities Used</h2>
 
-- <b>PowerShell</b> 
-- <b>Diskpart</b>
+- <b>language or utility</b> 
 
 <h2>Environments Used </h2>
 
-- <b>Windows 10</b> (21H2)
+- <b>environment</b> (21H2)
 
 <h2>Program walk-through:</h2>
 
 <p align="center">
 Launch the utility: <br/>
-<img src="https://i.imgur.com/62TgaWL.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://" height="80%" width="80%" alt="alt name"/>
 <br />
 <br />
 Select the disk:  <br/>
-<img src="https://i.imgur.com/tcTyMUE.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://" height="80%" width="80%" alt="alt name"/>
 <br />
 <br />
 Enter the number of passes: <br/>
-<img src="https://i.imgur.com/nCIbXbg.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://" height="80%" width="80%" alt="alt name"/>
 <br />
 <br />
 Confirm your selection:  <br/>
-<img src="https://i.imgur.com/cdFHBiU.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://" height="80%" width="80%" alt="alt name"/>
 <br />
 <br />
 Wait for process to complete (may take some time):  <br/>
-<img src="https://i.imgur.com/JL945Ga.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://" height="80%" width="80%" alt="alt name"/>
 <br />
 <br />
 Sanitization complete:  <br/>
-<img src="https://i.imgur.com/K71yaM2.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://" height="80%" width="80%" alt="alt name"/>
 <br />
 <br />
 Observe the wiped disk:  <br/>
-<img src="https://i.imgur.com/AeZkvFQ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://" height="80%" width="80%" alt="alt name"/>
 </p>
 
 dropdown menu in markup
