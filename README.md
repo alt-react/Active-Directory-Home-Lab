@@ -605,11 +605,17 @@ You have installed everything correctly.
 ### 9) Install and configure Windows Server
 
 <details>
-<summary>Install Active Directory</summary>
+<summary>Install Active Directory on Windows Server 2022 (Active Directory Domain Controller</summary>
 <br>
 
    1) hit the "Windows" key, click on "Windows Administrative Tools", and click on "Server Manager"
-   2) 
+   2) at the top-right corner, click "Manage", then click "Add Roles and Features"
+   3) click "Next", and make sure that the "Role-based or feature-based installation" radio button is selected, click "Next", then click "Next" again
+   4) Click on "Active Directory Domain Services", then click on "Add features", click "Next" until you see "Install", then click "Install"
+   5) After installation has been completed, close the window
+   6) In the "Server Manager" window, click the flag icon that is beside "Manage", and click the blue "Promote this server to a domain controller"  text
+   7) click the "Add a new forest" radio button to create a brand-new domain, and type in whatever name you want, followed by a . and some text (such as the word "local") in the text box next to the "Root domain name:" text, and click "Next"
+   8) leave all options as default, in the "Password:" field, type in a good password, then in the "Confirm password:" field, re-enter your password, then click "Next"
 
 </details>
 
