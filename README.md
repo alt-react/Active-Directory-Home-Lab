@@ -368,14 +368,14 @@ from our Windows 10 (target-PC):
 </details>
 
 <details>
-<summary>Install Sysmon on Window 10 (target0-PC)</summary>
+<summary>Install Sysmon on Window 10 (target-PC)</summary>
 <br>
 
    1) open a web browser and search for "Sysmon", and click the link that shows "Sysmon - Sysinternals"
    2) scroll down and click the " Download Sysmon" link
    3) do a web search for "sysmon olaf config", click on the "Github - olafhartong/sysmon-modular" link, scroll down, and click the "sysmonconfig.xml" file
    4) click the "raw" option on the top-right of the page, right-click and save the file
-   5)  navigate to the directory we downloaded sysmonconfig.xml to, click on the file to select it, right-click the file, click "Extract all", then click the "Extract" button
+   5)  navigate to the directory we downloaded sysmon.zip to, click on the file to select it, right-click the file, click "Extract all", then click the "Extract" button
    6)  in the window that just popped up, click the file explorer bar, right-click the folder path, then click "Copy"
    7)  hit the "Windows" key, type in "powershell", run powershell as administrator, then click "yes"
    8)  type in `cd` followed by a single space, then right-click inside powershell to past the folder path we just copied in the previous step, and hit "Enter"
@@ -469,7 +469,7 @@ You have installed everything correctly.
 </details>
 
 <details>
-<summary>Set the static IP address for Windows 10 (target-PC)</summary>
+<summary>Set the static IP address for Windows Server 2022 (Active Directory Domain Controller)</summary>
 <br>
 
    1) hit the "Windows" key, type in "cmd", and hit enter
@@ -477,26 +477,26 @@ You have installed everything correctly.
    3) at the right end of the taskbar, right-click the "network" icon and click "Open Network & Internet settings"
    4) scroll down and click on "Change adapter options", right-click the network adapter, and click on "Properties"
    5) double-click "Internet Protocol Version 4 (TCP/IPv4)", and click the "Use the following IP address:" radio button
-   6) in the "IP address" field, type in `192.168.10.100`, in the Subnet mask section, type in `255.255.255.0`, and in the "Default gateway" section, type in `192.168.10.1`
+   6) in the "IP address" field, type in `192.168.10.7`, in the Subnet mask section, type in `255.255.255.0`, and in the "Default gateway" section, type in `192.168.10.1`
    7) in the "Preferred DNS server:" section, type in `8.8.8.8`, then click "OK", and close the window
-   8) in the command prompt, enter `ipconfig` to verify that our IPv4 Address is 192.168.10.100
+   8) in the command prompt, enter `ipconfig` to verify that our IPv4 Address is 192.168.10.7
 
 </details>
 
 <details>
-<summary>Verify that Splunk on our Ubuntu Server is accessible from our Windows 10 (target-PC)</summary>
+<summary>Verify that Splunk on our Ubuntu Server is accessible from our Windows Server 2022 (Active Directory Domain Controller</summary>
 <br>
 
 Make sure our Ubuntu Server virtual machine is running, then:
 
-from our Windows 10 (target-PC):
+from our Windows Server 2022 (Active Directory Domain Controller:
 
    1) open a web browser and type in `192.168.10.10:8000` to verify that we can reach our Splunk log-in page
 
 </details>
 
 <details>
-<summary>Install and configure Splunk Universal Forwarder on Windows 10 (target-PC)</summary>
+<summary>Install and configure Splunk Universal Forwarder on Windows Server 2022 (Active Directory Domain Controller</summary>
 <br>
 
    1) open up a web browser, go to [splunk.com](https://www.splunk.com) and log in
@@ -513,16 +513,16 @@ from our Windows 10 (target-PC):
 </details>
 
 <details>
-<summary>Install Sysmon on Window 10 (target0-PC)</summary>
+<summary>Install Sysmon on Window Server 2022 (Active Directory Domain Controller</summary>
 <br>
 
    1) open a web browser and search for "Sysmon", and click the link that shows "Sysmon - Sysinternals"
    2) scroll down and click the " Download Sysmon" link
    3) do a web search for "sysmon olaf config", click on the "Github - olafhartong/sysmon-modular" link, scroll down, and click the "sysmonconfig.xml" file
    4) click the "raw" option on the top-right of the page, right-click and save the file
-   5)  navigate to the directory we downloaded sysmonconfig.xml to, click on the file to select it, right-click the file, click "Extract all", then click the "Extract" button
+   5)  navigate to the directory we downloaded sysmon.zip to, click on the file to select it, right-click the file, click "Extract all", then click the "Extract" button
    6)  in the window that just popped up, click the file explorer bar, right-click the folder path, then click "Copy"
-   7)  hit the "Windows" key, type in "powershell", run powershell as administrator, then click "yes"
+   7)  hit the "Windows" key, type in "powershell", rick-click powershell, click "run as administrator"
    8)  type in `cd` followed by a single space, then right-click inside powershell to past the folder path we just copied in the previous step, and hit "Enter"
    9)  type in `.\Sysmon64.exe -i ..\sysmonconfig.xml`, hit "Enter", then click "Agree" to install Sysmon using our sysmonconfig.xml configuration file
 
