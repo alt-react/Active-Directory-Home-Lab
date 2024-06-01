@@ -671,13 +671,38 @@ To verify that all is working:
 
 ---
 
-### Create Snapshots (known-working restore points) for each of our virtual machines
+### Create / Restoring Snapshots (known-working restore points) for each of our virtual machines
 
 <details>
-<summary></summary>
+<summary>Create a Snapshot of your fresh working virtual machine in VirtualBox</summary>
 <br>
 
-   1)
+For each of the virtual machines you want to back up:
+
+Open up VirtualBox
+
+   1) click on the virtual machine you want to snapshot
+   2) click the "3-dot / 3-line" icon on the right side of the virtual machine
+
+![virtualbox-snapshot](https://github.com/alt-react/Active-Directory-Home-Lab/assets/170683744/52d96f9c-1bdc-495b-9a1b-aeffa0897547)
+
+   3) click "Snapshots", then click the "Take" icon at the top of the screen
+   4) enter a name and the description of the snapshot, and click "OK"
+
+</details>
+
+<details>
+<summary>Restore a Snapshot of your fresh working virtual machine in VirtualBox</summary>
+<br>
+
+Open up VirtualBox
+
+   1) click on the virtual machine you want to snapshot
+   2) click the "3-dot / 3-line" icon on the right side of the virtual machine
+
+![virtualbox-snapshot](https://github.com/alt-react/Active-Directory-Home-Lab/assets/170683744/52d96f9c-1bdc-495b-9a1b-aeffa0897547)
+
+   3) click "Snapshots", click the restore point you want tot restore, then click the "Restore" icon at the top of the screen, then click "Restore"
 
 </details>
 
