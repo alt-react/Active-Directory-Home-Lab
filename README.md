@@ -44,6 +44,8 @@ ___
 - Splunk SIEM - to organize logs in and analyze logs from 1 place
 - Splunk Universal Forwarder - to securely collect and send data from machines to our Splunk instance
 - Sysmon - lets you detect malicious activity by tracking code behavior and network traffic, as well as create detections based on the malicious activity.
+- Windows Active Directory Domain Services (AD DS) - To create a Domain in Windows
+- Windows Active Directory Users and Computers - to create Organizational Units and new Users to our Domain in Windows
 
 ## Steps
 <details>
@@ -602,7 +604,7 @@ You have installed everything correctly.
 
 ---
 
-### 9) Install and configure Windows Server
+### 9) Configure Windows Server 2022 as a Domain Controller
 
 <details>
 <summary>Install Active Directory on Windows Server 2022 (Active Directory Domain Controller)</summary>
@@ -613,16 +615,23 @@ You have installed everything correctly.
    3) click "Next", and make sure that the "Role-based or feature-based installation" radio button is selected, click "Next", then click "Next" again
    4) Click on "Active Directory Domain Services", then click on "Add features", click "Next" until you see "Install", then click "Install"
    5) After installation has been completed, close the window
-   6) In the "Server Manager" window, click the flag icon that is beside "Manage", and click the blue "Promote this server to a domain controller"  text
-   7) click the "Add a new forest" radio button to create a brand-new domain, and type in whatever name you want, followed by a . and some text (such as the word "local") in the text box next to the "Root domain name:" text, and click "Next"
-   8) leave all options as default, in the "Password:" field, type in a good password, then in the "Confirm password:" field, re-enter your password, then click "Next", until you see the "Install" option, then click "Install"
-   9) Once the installation is completed, the machine will automatically restart
-   10) go to log in to the Windows Server 2022 machine, and if you notice "*Domain*\Administrator", it means you have successfully installed Active Directory Domain Services, and that this machine has been successfully promoted to a Domain Controller
+   
+</details>
+
+<details>
+<summary>Promote the server to a Domain Controller</summary>
+<br>
+
+   1) In the "Server Manager" window, click the flag icon that is beside "Manage", and click the blue "Promote this server to a domain controller"  text
+   2) click the "Add a new forest" radio button to create a brand-new domain, and type in whatever name you want, followed by a . and some text (such as the word "local") in the text box next to the "Root domain name:" text, and click "Next"
+   3) leave all options as default, in the "Password:" field, type in a good password, then in the "Confirm password:" field, re-enter your password, then click "Next", until you see the "Install" option, then click "Install"
+   5) Once the installation is completed, the machine will automatically restart
+   6) go to log in to the Windows Server 2022 machine, and if you notice "*Domain*\Administrator", it means you have successfully installed Active Directory Domain Services, and that this machine has been successfully promoted to a Domain Controller
 
 </details>
 
 <details>
-<summary>Create Users to our newly created Domain</summary>
+<summary>Create Organizational Units and Users in our newly created Domain</summary>
 <br>
 
    1) go to "Server Manager", click on "Tools", then click on "Active Directory Users and Computers"
@@ -634,6 +643,27 @@ You have installed everything correctly.
    7) in "Active Directory Users and Computers", hover over our domain, right-click it, hover over "New", click on "Organizational Unit", type in "HR", then click "OK"
    8) hover over "HR", right-click "HR", hover over "New", click "User", type in whatever first name and last name you'd like, and use the first letter of the first name, followed by the entire last name into the "User logon name:" field
    9) enter whatever you want the password to be, then uncheck the "User must change password at next logon" option, if you want, then click "Next", and click "Finish"
+
+</details>
+
+---
+
+<details>
+<summary>Join our Windows 10 (target-PC) to our new Domain</summary>
+<br>
+
+   1) right-click on the network icon on the right side of the taskbar, click "Open Network & Internet settings", click on "Change adapter options", and right-click your adapter
+   2) select "Properties", double-click on Internet Protocol Version 4 (TCP/IPv4), and change the "Preferred DNS server:" to the IP address of our Domain Controller (192.168.10.7), and click "OK"
+   3) to verify everything is set up correctly, open the command prompt, enter "ipconfig", and verify that the "DNS Server" has the IP address "192.168.10.7"
+   4) search for "PC", click on "Properties", scroll down, and select "Advanced system settings"
+   5) click the "Computer Name" tab, click "Change", click "Domain:", type in the name of your domain, and click "OK"
+   6) use your administrative account login credentials to log in (username: administrator password: your password)
+   7) click "OK", click "OK" again, close the window, then click "Restart Now"
+   
+To verify that all is working:
+
+   1) log in as one of your newly created users by clicking on "Other user" on the login screen
+   2) type in the username and password for your newly created user and log in
 
 </details>
 
