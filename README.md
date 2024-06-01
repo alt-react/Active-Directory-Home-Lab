@@ -563,9 +563,6 @@ from our Windows Server 2022 (Active Directory Domain Controller:
 
 </details>
 
-
-<!--
-
 ---
 
 ### 6) Continue Splunk Server configuration
@@ -576,7 +573,7 @@ from our Windows Server 2022 (Active Directory Domain Controller:
 
    1) open a web browser, go to `192.168.10.10:8000`, and log into Splunk Server
 
-If you have already configured the Windows 10 machine first, the configuration below has been made. If not:
+If you configured the Windows 10 machine first, the configuration below has already been made. If not:
    
    2) at the top of the window, select "Settings", then select "Indexes"
    3) click "OK" then at the top-right, click "New Index"
@@ -600,6 +597,10 @@ If everything has been set up correctly up to this point, we should be receiving
 You have installed everything correctly.
 
 </details>
+
+
+
+<!--
 
 -->
 
