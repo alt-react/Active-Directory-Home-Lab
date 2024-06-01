@@ -651,7 +651,7 @@ You have installed everything correctly.
 ---
 
 <details>
-<summary>Join our Windows 10 (target-PC) to our new Domain</summary>
+<summary>10) Join our Windows 10 (target-PC) to our new Domain</summary>
 <br>
 
    1) right-click on the network icon on the right side of the taskbar, click "Open Network & Internet settings", click on "Change adapter options", and right-click your adapter
