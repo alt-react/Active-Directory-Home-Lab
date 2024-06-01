@@ -24,7 +24,9 @@ ___
 
 4) Install Splunk Universal Forwarder and Sysmon on both the Windows 10 (target) virtual machine and the Windows Server 2022 (Active Directory Domain Controller)
 
-5) Install and configure Windows Server, set up Active Directory, promote the Windows Server 2022 machine to a Domain Controller, and add Windows 10 (target-PC) to the Domain
+5) Install and configure Windows Server, set up Active Directory, promote the Windows Server 2022 machine to a Domain Controller, create new Users within new Organizational Units within our new Domain, and add Windows 10 (target-PC) to the Domain
+
+6) Create snapshots of all our virtual machines to have working restore points in case something goes wrong
 
 ### Tools Used
 
@@ -664,6 +666,18 @@ To verify that all is working:
 
    1) log in as one of your newly created users by clicking on "Other user" on the login screen
    2) type in the username and password for your newly created user and log in
+
+</details>
+
+---
+
+### Create Snapshots (known-working restore points) for each of our virtual machines
+
+<details>
+<summary></summary>
+<br>
+
+   1)
 
 </details>
 
