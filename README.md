@@ -24,6 +24,8 @@ ___
 
 4) Install Splunk Universal Forwarder and Sysmon on both the Windows 10 (target) virtual machine and the Windows Server 2022 (Active Directory Domain Controller)
 
+5) Install and configure Windows Server, set up Active Directory, promote the Windows Server 2022 machine to a Domain Controller, and add Windows 10 (target-PC) to the Domain
+
 ### Tools Used
 
 <details>
@@ -41,7 +43,7 @@ ___
 - Windows Media Creation Tool - to get Windows 10 ISO
 - Splunk SIEM - to organize logs in and analyze logs from 1 place
 - Splunk Universal Forwarder - to securely collect and send data from machines to our Splunk instance
-- Sysmon - 
+- Sysmon - lets you detect malicious activity by tracking code behavior and network traffic, as well as create detections based on the malicious activity.
 
 ## Steps
 <details>
@@ -598,7 +600,17 @@ You have installed everything correctly.
 
 </details>
 
+---
 
+### 9) Install and configure Windows Server
+
+<details>
+<summary></summary>
+<br>
+
+   1)
+
+</details>
 
 <!--
 
