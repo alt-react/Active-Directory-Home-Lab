@@ -378,7 +378,7 @@ from our Windows 10 (target-PC):
    5)  navigate to the directory we downloaded sysmon.zip to, click on the file to select it, right-click the file, click "Extract all", then click the "Extract" button
    6)  in the window that just popped up, click the file explorer bar, right-click the folder path, then click "Copy"
    7)  hit the "Windows" key, type in "powershell", run powershell as administrator, then click "yes"
-   8)  type in `cd` followed by a single space, then right-click inside powershell to past the folder path we just copied in the previous step, and hit "Enter"
+   8)  type in `cd` followed by a single space, then right-click inside powershell to paste the folder path we just copied in the previous step, and hit "Enter"
    9)  type in `.\Sysmon64.exe -i ..\sysmonconfig.xml`, hit "Enter", then click "Agree" to install Sysmon using our sysmonconfig.xml configuration file
 
 </details>
@@ -460,9 +460,6 @@ You have installed everything correctly.
 <summary>Change hostname to "ADDC01"</summary>
 <br>
 
-
-<!--
-
    1) in the Windows taskbar, search for "PC", click "Properties", then click the "Rename this PC" button
    2) type in `target-PC`, click "Next", then click "Restart now
 
@@ -523,10 +520,12 @@ from our Windows Server 2022 (Active Directory Domain Controller:
    5)  navigate to the directory we downloaded sysmon.zip to, click on the file to select it, right-click the file, click "Extract all", then click the "Extract" button
    6)  in the window that just popped up, click the file explorer bar, right-click the folder path, then click "Copy"
    7)  hit the "Windows" key, type in "powershell", rick-click powershell, click "run as administrator"
-   8)  type in `cd` followed by a single space, then right-click inside powershell to past the folder path we just copied in the previous step, and hit "Enter"
+   8)  type in `cd` followed by a single space, then right-click inside powershell to paste the folder path we just copied in the previous step, and hit "Enter"
    9)  type in `.\Sysmon64.exe -i ..\sysmonconfig.xml`, hit "Enter", then click "Agree" to install Sysmon using our sysmonconfig.xml configuration file
 
 </details>
+
+<!--
 
 <details>
 <summary>Configure Splunk Forwarder on Windows 10 (target-PC) machine</summary>
