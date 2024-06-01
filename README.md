@@ -615,7 +615,17 @@ You have installed everything correctly.
    5) After installation has been completed, close the window
    6) In the "Server Manager" window, click the flag icon that is beside "Manage", and click the blue "Promote this server to a domain controller"  text
    7) click the "Add a new forest" radio button to create a brand-new domain, and type in whatever name you want, followed by a . and some text (such as the word "local") in the text box next to the "Root domain name:" text, and click "Next"
-   8) leave all options as default, in the "Password:" field, type in a good password, then in the "Confirm password:" field, re-enter your password, then click "Next"
+   8) leave all options as default, in the "Password:" field, type in a good password, then in the "Confirm password:" field, re-enter your password, then click "Next", until you see the "Install" option, then click "Install"
+   9) Once the installation is completed, the machine will automatically restart
+   10) go to log in to the Windows Server 2022 machine, and if you notice "*Domain*\Administrator", it means you have successfully installed Active Directory Domain Services, and that this machine has been successfully been promoted to a Domain Controller
+
+</details>
+
+<details>
+<summary>Create Users</summary>
+<br>
+
+   1)
 
 </details>
 
