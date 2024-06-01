@@ -605,10 +605,11 @@ You have installed everything correctly.
 ### 9) Install and configure Windows Server
 
 <details>
-<summary></summary>
+<summary>Install Active Directory</summary>
 <br>
 
-   1)
+   1) hit the "Windows" key, click on "Windows Administrative Tools", and click on "Server Manager"
+   2) 
 
 </details>
 
