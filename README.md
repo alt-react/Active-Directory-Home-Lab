@@ -439,8 +439,9 @@ If everything has been set up correctly up to this point, we should be receiving
 
    1) click on "Apps" in the top-left corner, click on "Search & Reporting", and click "Skip", and click "Skip tour"
    2) in the input field under "Search", type in `index=endpoint`, then click on the green magnifying glass search button
+   3) on the left, under "SELECTED FIELDS", click the "a source" option
 
- I you see the following values:
+ If you see the following values:
  
     * WinEventLog:Security
     * WinEventLog:System
@@ -525,13 +526,11 @@ from our Windows Server 2022 (Active Directory Domain Controller:
 
 </details>
 
-<!--
-
 <details>
-<summary>Configure Splunk Forwarder on Windows 10 (target-PC) machine</summary>
+<summary>Configure Splunk Forwarder on Windows Server 2022 (Active Directory Domain Controller) machine</summary>
 <br>
 
-   1) hit the "Windows" key, type in "notepad", run notepad as administrator, and click "yes"
+   1) hit the "Windows" key, type in "notepad", right-click notepad, and click run as administrator
       
    Enter the following text into notepad:
 
@@ -557,34 +556,41 @@ from our Windows Server 2022 (Active Directory Domain Controller:
 
    in the "Save as type" section, click text, and select "All Files, then in the "File name:" section, type "inputs.conf", and click "Save"
    
-   2) hit the "Windows" key, type "services", and click "Run as administrator"
+   2) hit the "Windows" key, type "services", right-click Services, and click "Run as administrator"
    3) scroll down and double-click on "SplunkForwarder"
    4) click the "Log On" tab, then click the "Local System account" radio button, click "Apply", then click "OK"
    5) right-click "SplunkFowarder", click "Restart", if you get a pop up saying that Windows could not stop the SplunkForwarder service, click "OK", then click "Start the service"
 
 </details>
 
+
+<!--
+
 ---
 
 ### 6) Continue Splunk Server configuration
 
 <details>
-<summary>Configuring Splunk Server to accept logs from the Windows 10 (target-PC) machine</summary>
+<summary>Configuring Splunk Server to accept logs from the Windows Server 2022 (Active Directory Domain Controller) machine</summary>
 <br>
 
    1) open a web browser, go to `192.168.10.10:8000`, and log into Splunk Server
+
+If you have already configured the Windows 10 machine first, the configuration below has been made. If not:
+   
    2) at the top of the window, select "Settings", then select "Indexes"
    3) click "OK" then at the top-right, click "New Index"
    4) in the "Index Name" field, type in "endpoint", and click "Save"
    5) at the top of the window, click on "Settings", then click on "Forwarding and receiving"
    6) under "Received data", click on "Configuring receiving", click on "New Receiving Port", then type `9997` in the "Listen on this port" section, and click "Save"
 
-If everything has been set up correctly up to this point, we should be receiving data from our Windows 10 (target-PC) into Splunk on our Ubuntu Server. To verify:
+If everything has been set up correctly up to this point, we should be receiving data from our Windows Server 2022 (Active Directory Domain Controller) into Splunk on our Ubuntu Server. To verify:
 
-   1) click on "Apps" in the top-left corner, click on "Search & Reporting", and click "Skip", and click "Skip tour"
+   1) click on "Apps" in the top-left corner, and click on "Search & Reporting"
    2) in the input field under "Search", type in `index=endpoint`, then click on the green magnifying glass search button
+   3) on the left, under "SELECTED FIELDS", click the "a source" option
 
- I you see the following values:
+ If you see the following values:
  
     * WinEventLog:Security
     * WinEventLog:System
