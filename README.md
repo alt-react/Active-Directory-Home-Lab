@@ -464,7 +464,7 @@ You have installed everything correctly.
 <br>
 
    1) in the Windows taskbar, search for "PC", click "Properties", then click the "Rename this PC" button
-   2) type in `target-PC`, click "Next", then click "Restart now
+   2) type in `ADDC01`, click "Next", then click "Restart now
 
 </details>
 
