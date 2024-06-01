@@ -565,7 +565,7 @@ from our Windows Server 2022 (Active Directory Domain Controller:
 
 ---
 
-### 6) Continue Splunk Server configuration
+### 8) Continue Splunk Server configuration
 
 <details>
 <summary>Configuring Splunk Server to accept logs from the Windows Server 2022 (Active Directory Domain Controller) machine</summary>
