@@ -605,7 +605,7 @@ You have installed everything correctly.
 ### 9) Install and configure Windows Server
 
 <details>
-<summary>Install Active Directory on Windows Server 2022 (Active Directory Domain Controller</summary>
+<summary>Install Active Directory on Windows Server 2022 (Active Directory Domain Controller)</summary>
 <br>
 
    1) hit the "Windows" key, click on "Windows Administrative Tools", and click on "Server Manager"
@@ -617,15 +617,23 @@ You have installed everything correctly.
    7) click the "Add a new forest" radio button to create a brand-new domain, and type in whatever name you want, followed by a . and some text (such as the word "local") in the text box next to the "Root domain name:" text, and click "Next"
    8) leave all options as default, in the "Password:" field, type in a good password, then in the "Confirm password:" field, re-enter your password, then click "Next", until you see the "Install" option, then click "Install"
    9) Once the installation is completed, the machine will automatically restart
-   10) go to log in to the Windows Server 2022 machine, and if you notice "*Domain*\Administrator", it means you have successfully installed Active Directory Domain Services, and that this machine has been successfully been promoted to a Domain Controller
+   10) go to log in to the Windows Server 2022 machine, and if you notice "*Domain*\Administrator", it means you have successfully installed Active Directory Domain Services, and that this machine has been successfully promoted to a Domain Controller
 
 </details>
 
 <details>
-<summary>Create Users</summary>
+<summary>Create Users to our newly created Domain</summary>
 <br>
 
-   1)
+   1) go to "Server Manager", click on "Tools", then click on "Active Directory Users and Computers"
+   2) right-click our domain, hover over "New", then click on "Organizational Unit"
+   3) type in "IT", then click "OK"
+   4) right-click "IT", hover over "New", then click "User"
+   5) type in a first name in the "First name" field, type in a last name in the "Last name" field, then in the "User logon" field, type in the first letter of the first name, followed by the entire last name, and click "Next"
+   6) enter whatever you want the password to be, then uncheck the "User must change password at next logon" option, if you want, then click "Next", and click "Finish"
+   7) in "Active Directory Users and Computers", hover over our domain, right-click it, hover over "New", click on "Organizational Unit", type in "HR", then click "OK"
+   8) hover over "HR", right-click "HR", hover over "New", click "User", type in whatever first name and last name you'd like, and use the first letter of the first name, followed by the entire last name into the "User logon name:" field
+   9) enter whatever you want the password to be, then uncheck the "User must change password at next logon" option, if you want, then click "Next", and click "Finish"
 
 </details>
 
